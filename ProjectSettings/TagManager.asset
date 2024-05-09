@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Wall
+  - Deadly
+  - Gate
+  - Hook
+  - Package
+  - Fire
+  - Damage
+  - Rock
+  - Fluffy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - Blob
+  - Walls
+  - Floor
+  - 3D
+  - BlobWall
+  - AntiBlob
+  - Rocks
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: FarBag
+    uniqueID: 945546791
+    locked: 0
+  - name: MiddleBg
+    uniqueID: 42276399
+    locked: 0
+  - name: Background
+    uniqueID: 1545606447
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 1519088861
+    locked: 0
+  - name: Foreground
+    uniqueID: 3256912493
+    locked: 0

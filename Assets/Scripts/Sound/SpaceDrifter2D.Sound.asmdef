@@ -1,0 +1,16 @@
+{
+    "name": "SpaceDrifter2D.Sound",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ffbd54abc14f6014090418033dfaec1d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

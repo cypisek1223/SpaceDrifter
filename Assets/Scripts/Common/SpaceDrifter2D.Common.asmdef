@@ -1,0 +1,25 @@
+{
+    "name": "SpaceDrifter2D.Common",
+    "rootNamespace": "SpaceDrifter2D",
+    "references": [
+        "GUID:850d6a2cb8b139642ae84696ae3fd88a",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:15fc0a57446b3144c949da3e2b9737a9",
+        "GUID:8b2f5cf5680a6e54a9ee260d0402e905",
+        "GUID:739ee292f9128b74c891573cfc173460",
+        "GUID:4307f53044263cf4b835bd812fc161a4",
+        "GUID:776d03a35f1b52c4a9aed9f56d7b4229",
+        "GUID:ffbd54abc14f6014090418033dfaec1d",
+        "GUID:c834c8f70404f714899ca93afee32a10",
+        "GUID:caccfbdb442cdc64fa722b4c5585521f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

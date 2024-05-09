@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd6d60f20cb7a14da7511941fbb0934, type: 3}
+  m_Name: FourthWorld
+  m_EditorClassIdentifier: 
+  name: Revelation Planet
+  description: "Dark planet which hides all the secrets. \nThe Substance gets impatient
+    there and \nwants to communicate immediately"
+  backgroundMat: {fileID: 2100000, guid: 524bfb4f110b63d4ea5817786dde6350, type: 2}
+  splashMat: {fileID: 2100000, guid: 259eab42e840c664299fbbe8ccaccc56, type: 2}
+  themePrimaryColor: {r: 0.088187024, g: 0.4056604, b: 0, a: 1}
+  themeLightColor: {r: 0.25497174, g: 1, b: 0, a: 1}
+  themeDarkColor: {r: 0, g: 0, b: 0, a: 0}
+  levelList:
+  - name: Saws Outside
+    scene: SawObstaclesTest
+    levelType: 1
+    fade: 1
+    locked: 0
+  - name: Saws Inside
+    scene: Initialisation
+    levelType: 1
+    fade: 1
+    locked: 0
+  locked: 0

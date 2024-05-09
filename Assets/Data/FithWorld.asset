@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd6d60f20cb7a14da7511941fbb0934, type: 3}
+  m_Name: FithWorld
+  m_EditorClassIdentifier: 
+  name: Break Through
+  description: Full of light planet that represents another dimension of skills
+  backgroundMat: {fileID: 2100000, guid: dd1fa05f218737849a2f4ed678120bad, type: 2}
+  splashMat: {fileID: 2100000, guid: 4dd114b4a981fe547b1a37d328885da0, type: 2}
+  themePrimaryColor: {r: 0.99215686, g: 0.23831964, b: 0, a: 1}
+  themeLightColor: {r: 1, g: 0.5506037, b: 0, a: 1}
+  themeDarkColor: {r: 0, g: 0, b: 0, a: 1}
+  levelList:
+  - name: Test Level
+    scene: FirstSteps
+    levelType: 1
+    fade: 1
+    locked: 0
+  - name: Test Level 2
+    scene: FirstMistery
+    levelType: 1
+    fade: 1
+    locked: 0
+  locked: 0

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd6d60f20cb7a14da7511941fbb0934, type: 3}
+  m_Name: Moon
+  m_EditorClassIdentifier: 
+  name: Moon Practice
+  description: Very high planet with lots of dead ends
+  backgroundMat: {fileID: 2100000, guid: 806974af0ac77f34dac08b26ee95399d, type: 2}
+  splashMat: {fileID: 2100000, guid: 7be0f015630880c43b18bbd399979cda, type: 2}
+  themePrimaryColor: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 1}
+  themeLightColor: {r: 1, g: 1, b: 1, a: 1}
+  themeDarkColor: {r: 0, g: 0, b: 0, a: 1}
+  levelList:
+  - name: First Flight
+    scene: FirstFlight
+    levelType: 1
+    fade: 1
+    locked: 0
+  - name: Portal Crossing
+    scene: PortalsCrossing
+    levelType: 1
+    fade: 1
+    locked: 0
+  - name: Decision
+    scene: SecondFlight
+    levelType: 1
+    fade: 1
+    locked: 0
+  locked: 0

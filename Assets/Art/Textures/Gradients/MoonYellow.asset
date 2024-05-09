@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0063f6dfc6b6a4688b090edb690ed5, type: 3}
+  m_Name: MoonYellow
+  m_EditorClassIdentifier: 
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0.7058824, g: 0.6923366, b: 0.04313724, a: 0.7411765}
+    key1: {r: 0.74509805, g: 0.55414957, b: 0.10980393, a: 1}
+    key2: {r: 1, g: 1, b: 0.1745283, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 6361
+    ctime1: 53006
+    ctime2: 65535
+    ctime3: 61102
+    ctime4: 42983
+    ctime5: 65535
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 39514
+    atime2: 49730
+    atime3: 49730
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  width: 64
+  texture: {fileID: 4335355786239997519}
+--- !u!28 &4335355786239997519
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Moon
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 64
+  m_Height: 4
+  m_CompleteImageSize: 1404
+  m_MipsStripped: 0
+  m_TextureFormat: 5
+  m_MipCount: 7
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 1404
+  _typelessdata: bdb4b10bbfb4b10bc0b4b10bc2b4b10bc4b4b10bc6b4b10bc7b4b10bc9b4b00bcbb4af0cccb5ae0cceb5ae0cd0b5ad0dd2b5ac0dd3b5ab0ed5b6ab0ed7b6aa0ed8b6a90fdab6a80fdcb7a70fddb7a710dfb7a610e1b7a511e3b7a411e4b8a411e6b8a312e8b8a212e9b8a112ebb9a013edb9a013efb99f14f0b99e14f2b99d14f4ba9d15f5ba9c15f7ba9b15f9ba9a16fbbb9a16fcbb9916febb9817ffbb9717ffbb9618ffbc9618ffbc9518ffbc9419ffbc9319ffbd9319ffbd921affbd911affbd901bffbd8f1bffbe8f1bffbe8e1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cbdb4b10bbfb4b10bc0b4b10bc2b4b10bc4b4b10bc6b4b10bc7b4b10bc9b4b00bcbb4af0cccb5ae0cceb5ae0cd0b5ad0dd2b5ac0dd3b5ab0ed5b6ab0ed7b6aa0ed8b6a90fdab6a80fdcb7a70fddb7a710dfb7a610e1b7a511e3b7a411e4b8a411e6b8a312e8b8a212e9b8a112ebb9a013edb9a013efb99f14f0b99e14f2b99d14f4ba9d15f5ba9c15f7ba9b15f9ba9a16fbbb9a16fcbb9916febb9817ffbb9717ffbb9618ffbc9618ffbc9518ffbc9419ffbc9319ffbd9319ffbd921affbd911affbd901bffbd8f1bffbe8f1bffbe8e1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cbdb4b10bbfb4b10bc0b4b10bc2b4b10bc4b4b10bc6b4b10bc7b4b10bc9b4b00bcbb4af0cccb5ae0cceb5ae0cd0b5ad0dd2b5ac0dd3b5ab0ed5b6ab0ed7b6aa0ed8b6a90fdab6a80fdcb7a70fddb7a710dfb7a610e1b7a511e3b7a411e4b8a411e6b8a312e8b8a212e9b8a112ebb9a013edb9a013efb99f14f0b99e14f2b99d14f4ba9d15f5ba9c15f7ba9b15f9ba9a16fbbb9a16fcbb9916febb9817ffbb9717ffbb9618ffbc9618ffbc9518ffbc9419ffbc9319ffbd9319ffbd921affbd911affbd901bffbd8f1bffbe8f1bffbe8e1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cbdb4b10bbfb4b10bc0b4b10bc2b4b10bc4b4b10bc6b4b10bc7b4b10bc9b4b00bcbb4af0cccb5ae0cceb5ae0cd0b5ad0dd2b5ac0dd3b5ab0ed5b6ab0ed7b6aa0ed8b6a90fdab6a80fdcb7a70fddb7a710dfb7a610e1b7a511e3b7a411e4b8a411e6b8a312e8b8a212e9b8a112ebb9a013edb9a013efb99f14f0b99e14f2b99d14f4ba9d15f5ba9c15f7ba9b15f9ba9a16fbbb9a16fcbb9916febb9817ffbb9717ffbb9618ffbc9618ffbc9518ffbc9419ffbc9319ffbd9319ffbd921affbd911affbd901bffbd8f1bffbe8f1bffbe8e1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cbeb4b10bc1b4b10bc5b4b10bc8b4b00bcbb4ae0ccfb5ad0cd2b5ab0dd6b6aa0ed9b6a80fdcb7a70fe0b7a510e3b7a411e7b8a212eab8a012eeb99f13f1b99d14f4ba9c15f8ba9a15fbbb9916febb9717ffbb9618ffbc9418ffbc9319ffbd911affbd8f1bffbe8e1bffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cbeb4b10bc1b4b10bc5b4b10bc8b4b00bcbb4ae0ccfb5ad0cd2b5ab0dd6b6aa0ed9b6a80fdcb7a70fe0b7a510e3b7a411e7b8a212eab8a012eeb99f13f1b99d14f4ba9c15f8ba9a15fbbb9916febb9717ffbb9618ffbc9418ffbc9319ffbd911affbd8f1bffbe8e1bffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cffbe8d1cbfb4b10bc6b4b00bcdb4ad0cd4b5aa0ddab6a70fe1b7a410e8b8a112efb99e13f6ba9b15fcbb9816ffbb9518ffbc9219ffbd8e1bffbe8d1cffbe8d1cffbe8d1cc2b4b00bd0b4ab0cddb6a50febb89f12f9ba9915ffbb9318ffbd8d1bffbe8d1cc9b4ad0be4b7a210fcba9616ffbd8d1bd6b5a70dfdbb9118e9b89c12
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 

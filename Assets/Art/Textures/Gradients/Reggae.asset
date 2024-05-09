@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0063f6dfc6b6a4688b090edb690ed5, type: 3}
+  m_Name: Reggae
+  m_EditorClassIdentifier: 
+  gradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.042452812, b: 0.042452812, a: 1}
+    key1: {r: 0.29063714, g: 1, b: 0, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  width: 64
+  texture: {fileID: 5813608433905314235}
+--- !u!28 &5813608433905314235
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Gradient Texture
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: ae09ce6ae4b57b5be9be7c2a87f85b77
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 64
+  m_Height: 4
+  m_CompleteImageSize: 1404
+  m_MipsStripped: 0
+  m_TextureFormat: 5
+  m_MipCount: 7
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  m_PlatformBlob: 
+  image data: 1404
+  _typelessdata: ffff0b0bfffc0f0bfff9120afff7160afff41a0afff11e0affee220affeb260affe82909ffe62d09ffe33109ffe03509ffdd3909ffda3c09ffd74008ffd54408ffd24808ffcf4c08ffcc4f08ffc95308ffc65707ffc45b07ffc15f07ffbe6307ffbb6607ffb86a07ffb66e06ffb37206ffb07606ffad7906ffaa7d06ffa78106ffa58505ffa28905ff9f8d05ff9c9005ff999405ff969805ff949c04ff91a004ff8ea304ff8ba704ff88ab04ff85af04ff83b303ff80b703ff7dba03ff7abe03ff77c203ff75c603ff72ca02ff6fcd02ff6cd102ff69d502ff66d902ff64dd02ff61e001ff5ee401ff5be801ff58ec01ff55f001ff53f401ff50f700ff4dfb00ffff0b0bfffc0f0bfff9120afff7160afff41a0afff11e0affee220affeb260affe82909ffe62d09ffe33109ffe03509ffdd3909ffda3c09ffd74008ffd54408ffd24808ffcf4c08ffcc4f08ffc95308ffc65707ffc45b07ffc15f07ffbe6307ffbb6607ffb86a07ffb66e06ffb37206ffb07606ffad7906ffaa7d06ffa78106ffa58505ffa28905ff9f8d05ff9c9005ff999405ff969805ff949c04ff91a004ff8ea304ff8ba704ff88ab04ff85af04ff83b303ff80b703ff7dba03ff7abe03ff77c203ff75c603ff72ca02ff6fcd02ff6cd102ff69d502ff66d902ff64dd02ff61e001ff5ee401ff5be801ff58ec01ff55f001ff53f401ff50f700ff4dfb00ffff0b0bfffc0f0bfff9120afff7160afff41a0afff11e0affee220affeb260affe82909ffe62d09ffe33109ffe03509ffdd3909ffda3c09ffd74008ffd54408ffd24808ffcf4c08ffcc4f08ffc95308ffc65707ffc45b07ffc15f07ffbe6307ffbb6607ffb86a07ffb66e06ffb37206ffb07606ffad7906ffaa7d06ffa78106ffa58505ffa28905ff9f8d05ff9c9005ff999405ff969805ff949c04ff91a004ff8ea304ff8ba704ff88ab04ff85af04ff83b303ff80b703ff7dba03ff7abe03ff77c203ff75c603ff72ca02ff6fcd02ff6cd102ff69d502ff66d902ff64dd02ff61e001ff5ee401ff5be801ff58ec01ff55f001ff53f401ff50f700ff4dfb00ffff0b0bfffc0f0bfff9120afff7160afff41a0afff11e0affee220affeb260affe82909ffe62d09ffe33109ffe03509ffdd3909ffda3c09ffd74008ffd54408ffd24808ffcf4c08ffcc4f08ffc95308ffc65707ffc45b07ffc15f07ffbe6307ffbb6607ffb86a07ffb66e06ffb37206ffb07606ffad7906ffaa7d06ffa78106ffa58505ffa28905ff9f8d05ff9c9005ff999405ff969805ff949c04ff91a004ff8ea304ff8ba704ff88ab04ff85af04ff83b303ff80b703ff7dba03ff7abe03ff77c203ff75c603ff72ca02ff6fcd02ff6cd102ff69d502ff66d902ff64dd02ff61e001ff5ee401ff5be801ff58ec01ff55f001ff53f401ff50f700ff4dfb00fffd0d0bfff8140afff21c0affec240affe72b09ffe13309ffdb3a09ffd64208ffd04a08ffca5108ffc55907ffbf6107ffb96807ffb47006ffae7706ffa87f06ffa38705ff9d8e05ff979605ff929e04ff8ca504ff86ad04ff81b503ff7bbc03ff76c403ff70cb02ff6ad302ff65db02ff5fe201ff59ea01ff54f201ff4ef900fffd0d0bfff8140afff21c0affec240affe72b09ffe13309ffdb3a09ffd64208ffd04a08ffca5108ffc55907ffbf6107ffb96807ffb47006ffae7706ffa87f06ffa38705ff9d8e05ff979605ff929e04ff8ca504ff86ad04ff81b503ff7bbc03ff76c403ff70cb02ff6ad302ff65db02ff5fe201ff59ea01ff54f201ff4ef900fffa100affef200affe42f09ffd83e08ffcd4d08ffc25d07ffb66c06ffab7b06ffa08a05ff949a04ff89a904ff7eb803ff73c702ff67d702ff5ce601ff51f500fff4180affde3608ffc75507ffb07306ff9a9204ff83b003ff6dcf02ff56ed00ffe92709ffbb6406ff8ea103ff61de01ffd24507ff77bf02ffa48204
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 

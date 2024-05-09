@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d421eac10fccde46af4314542de4dbe, type: 3}
+  m_Name: SegmentLibrary_electric
+  m_EditorClassIdentifier: 
+  segments:
+  - {fileID: -7182990048477515510, guid: 0deab538d0f909049a2fb71017485d0d, type: 3}
+  - {fileID: 7854225562268592388, guid: 55f07689b93599e4e9a2fabd2c5144ab, type: 3}
+  - {fileID: 8463678872482840680, guid: 2a4108512b2caf94d8f36fdc2e586a04, type: 3}
+  - {fileID: 1027481785755778734, guid: b6c5199cc7376e24b9b0865b3660c88d, type: 3}
+  - {fileID: 3589824427095368100, guid: 144e894f9d7733e459e7b059ddfba2b5, type: 3}
+  - {fileID: 268249620489190472, guid: 16324fadad4875b4e9cc3a586b0bcd28, type: 3}
+  exits:
+  - {fileID: 1760357465465598317, guid: c5483ec467591a94c9917f189789fc29, type: 3}
+  rules:
+  - {fileID: 11400000, guid: e93a22267051a0445b58266f3350fdff, type: 2}

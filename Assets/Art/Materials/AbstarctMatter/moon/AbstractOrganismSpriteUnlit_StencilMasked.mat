@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AbstractOrganismSpriteUnlit_StencilMasked
+  m_Shader: {fileID: 4800000, guid: 5a2787e0f0a054942b0a70da27ab6b75, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise:
+        m_Texture: {fileID: 2800000, guid: 62b350d14308b2c479ff15db512e7607, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Pattern:
+        m_Texture: {fileID: 2800000, guid: 2a9043e9872c64d4e926d1c75bf03a24, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AbstractAmount: 1
+    - _StencilRef: 0
+    m_Colors:
+    - _Distortion: {r: 0.2, g: 0.2, b: 0, a: 0}
+    - _Edges: {r: 0.05, g: 1.19, b: 0, a: 0}
+    - _NoiseSpeed: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _NoiseTilling: {r: 4, g: 4, b: 0, a: 0}
+    - _PatternOffsetSpeed: {r: 0.2, g: 0.01, b: 0, a: 0}
+    - _PatternTilling: {r: 3, g: 3, b: 0, a: 0}
+    - _PrimColor: {r: 0.990566, g: 0.990566, b: 0.990566, a: 0}
+    - _SecndColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

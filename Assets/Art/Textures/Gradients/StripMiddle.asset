@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!28 &-6333786893122160743
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Gradient Texture
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 64
+  m_Height: 4
+  m_CompleteImageSize: 1404
+  m_MipsStripped: 0
+  m_TextureFormat: 5
+  m_MipCount: 7
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 1404
+  _typelessdata: ff000000ff020202ff040404ff060606ff070707ff090909ff1d1d1dff313131ff464646ff5b5b5bff707070ff888888ffaaaaaaffccccccffeeeeeefff7f7f7ffe7e7e7ffd7d7d7ffc8c8c8ffc1c1c1ffc2c2c2ffc4c4c4ffc5c5c5ffc6c6c6ffc7c7c7ffc9c9c9ffcacacaffcbcbcbffcdcdcdffcececeffcfcfcfffd0d0d0ffd2d2d2ffd3d3d3ffd4d4d4ffd5d5d5ffd7d7d7ffd8d8d8ffd9d9d9ffdbdbdbffdcdcdcffddddddffdededeffe0e0e0ffe1e1e1ffe2e2e2ffe3e3e3ffe5e5e5ffe6e6e6ffe7e7e7ffe8e8e8ffeaeaeaffebebebffecececffeeeeeeffefefeffff0f0f0fff1f1f1fff3f3f3fff4f4f4fff5f5f5fff6f6f6fff8f8f8fff9f9f9ff000000ff020202ff040404ff060606ff070707ff090909ff1d1d1dff313131ff464646ff5b5b5bff707070ff888888ffaaaaaaffccccccffeeeeeefff7f7f7ffe7e7e7ffd7d7d7ffc8c8c8ffc1c1c1ffc2c2c2ffc4c4c4ffc5c5c5ffc6c6c6ffc7c7c7ffc9c9c9ffcacacaffcbcbcbffcdcdcdffcececeffcfcfcfffd0d0d0ffd2d2d2ffd3d3d3ffd4d4d4ffd5d5d5ffd7d7d7ffd8d8d8ffd9d9d9ffdbdbdbffdcdcdcffddddddffdededeffe0e0e0ffe1e1e1ffe2e2e2ffe3e3e3ffe5e5e5ffe6e6e6ffe7e7e7ffe8e8e8ffeaeaeaffebebebffecececffeeeeeeffefefeffff0f0f0fff1f1f1fff3f3f3fff4f4f4fff5f5f5fff6f6f6fff8f8f8fff9f9f9ff000000ff020202ff040404ff060606ff070707ff090909ff1d1d1dff313131ff464646ff5b5b5bff707070ff888888ffaaaaaaffccccccffeeeeeefff7f7f7ffe7e7e7ffd7d7d7ffc8c8c8ffc1c1c1ffc2c2c2ffc4c4c4ffc5c5c5ffc6c6c6ffc7c7c7ffc9c9c9ffcacacaffcbcbcbffcdcdcdffcececeffcfcfcfffd0d0d0ffd2d2d2ffd3d3d3ffd4d4d4ffd5d5d5ffd7d7d7ffd8d8d8ffd9d9d9ffdbdbdbffdcdcdcffddddddffdededeffe0e0e0ffe1e1e1ffe2e2e2ffe3e3e3ffe5e5e5ffe6e6e6ffe7e7e7ffe8e8e8ffeaeaeaffebebebffecececffeeeeeeffefefeffff0f0f0fff1f1f1fff3f3f3fff4f4f4fff5f5f5fff6f6f6fff8f8f8fff9f9f9ff000000ff020202ff040404ff060606ff070707ff090909ff1d1d1dff313131ff464646ff5b5b5bff707070ff888888ffaaaaaaffccccccffeeeeeefff7f7f7ffe7e7e7ffd7d7d7ffc8c8c8ffc1c1c1ffc2c2c2ffc4c4c4ffc5c5c5ffc6c6c6ffc7c7c7ffc9c9c9ffcacacaffcbcbcbffcdcdcdffcececeffcfcfcfffd0d0d0ffd2d2d2ffd3d3d3ffd4d4d4ffd5d5d5ffd7d7d7ffd8d8d8ffd9d9d9ffdbdbdbffdcdcdcffddddddffdededeffe0e0e0ffe1e1e1ffe2e2e2ffe3e3e3ffe5e5e5ffe6e6e6ffe7e7e7ffe8e8e8ffeaeaeaffebebebffecececffeeeeeeffefefeffff0f0f0fff1f1f1fff3f3f3fff4f4f4fff5f5f5fff6f6f6fff8f8f8fff9f9f9ff010101ff050505ff080808ff272727ff505050ff7c7c7cffbbbbbbfff2f2f2ffdfdfdfffc4c4c4ffc3c3c3ffc5c5c5ffc8c8c8ffcacacaffcdcdcdffcfcfcfffd2d2d2ffd4d4d4ffd7d7d7ffdadadaffdcdcdcffdfdfdfffe1e1e1ffe4e4e4ffe6e6e6ffe9e9e9ffebebebffeeeeeefff0f0f0fff3f3f3fff5f5f5fff8f8f8ff010101ff050505ff080808ff272727ff505050ff7c7c7cffbbbbbbfff2f2f2ffdfdfdfffc4c4c4ffc3c3c3ffc5c5c5ffc8c8c8ffcacacaffcdcdcdffcfcfcfffd2d2d2ffd4d4d4ffd7d7d7ffdadadaffdcdcdcffdfdfdfffe1e1e1ffe4e4e4ffe6e6e6ffe9e9e9ffebebebffeeeeeefff0f0f0fff3f3f3fff5f5f5fff8f8f8ff030303ff171717ff666666ffd6d6d6ffd1d1d1ffc4c4c4ffc9c9c9ffcececeffd3d3d3ffd8d8d8ffddddddffe2e2e2ffe7e7e7ffecececfff1f1f1fff6f6f6ff0d0d0dff9e9e9effcacacaffcbcbcbffd5d5d5ffdfdfdfffe9e9e9fff3f3f3ff555555ffcacacaffdadadaffeeeeeeff8f8f8fffe4e4e4ffb9b9b9
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0063f6dfc6b6a4688b090edb690ed5, type: 3}
+  m_Name: StripMiddle
+  m_EditorClassIdentifier: 
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0, b: 0, a: 1}
+    key1: {r: 0.037037037, g: 0.037037037, b: 0.037037037, a: 1}
+    key2: {r: 0.49829325, g: 0.49829325, b: 0.49829325, a: 0}
+    key3: {r: 1, g: 1, b: 1, a: 0}
+    key4: {r: 0.754717, g: 0.754717, b: 0.754717, a: 0}
+    key5: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 5204
+    ctime2: 10987
+    ctime3: 14842
+    ctime4: 18890
+    ctime5: 65535
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 6
+    m_NumAlphaKeys: 2
+  width: 64
+  texture: {fileID: -6333786893122160743}

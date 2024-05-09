@@ -1,0 +1,4 @@
+CustomStencil - Writes custom value to stencil buffer (aside from also drawing a sprite)(Lit and Unlit)
+StencilMasked - Reads from stencil buffer and compares to custom value (masks different values)(Lit and Unlit)
+Sprite-Mask - Doesn't draw sprite, just writes custom value to stencil buffer
+AbstractStencil - Same as StencilMasked, just for meshes

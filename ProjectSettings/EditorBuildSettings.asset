@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Initialisation.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 1c2d6cf1dc71cc2469cb5056c579e9dd
+  - enabled: 1
+    path: Assets/Scenes/Levels/moon/FirstFlight.unity
+    guid: 25b7aec4f892b794095a715b5531ebdd
+  - enabled: 1
+    path: Assets/Scenes/Levels/moon/PortalsCrossing.unity
+    guid: 71493e75993528e4da816a4148476283
+  - enabled: 1
+    path: Assets/Scenes/Levels/moon/SecondFlight.unity
+    guid: b92741bc449856848b338aa682d3567b
+  - enabled: 1
+    path: Assets/Scenes/Levels/Planet1/FirstSteps.unity
+    guid: 9b7936fa9e6d1e445ae5285421f64e1d
+  - enabled: 1
+    path: Assets/Scenes/Levels/Planet1/FirstMistery.unity
+    guid: c54eb017f7e797741815eb3041071f45
+  - enabled: 1
+    path: Assets/Scenes/Levels/Planet1/FirstDifficulties.unity
+    guid: 1f2d7b237a32f3046945f0a88980a6ee
+  - enabled: 1
+    path: Assets/Scenes/Levels/Planet1/FirstDeath.unity
+    guid: 24752d633f39c254eb62af398c496e7d
+  - enabled: 1
+    path: Assets/Scenes/Levels/Planet1/FirstComeback.unity
+    guid: 35c84b88b6a1026428410bab4cd0ba2d
+  - enabled: 1
+    path: Assets/Scenes/Levels/Planet2/SecondChallenge.unity
+    guid: c8b26a60e6ed0b44a8a442972111f72a
+  - enabled: 1
+    path: Assets/Scenes/Levels/Planet2/SecondChance.unity
+    guid: ab70d354f73de8f41b284f99cc1bee62
+  - enabled: 1
+    path: Assets/Scenes/Levels/Planet2/SecondLife.unity
+    guid: 7c245e5118f7a0d4482c7725083cb365
+  - enabled: 1
+    path: Assets/Scenes/Levels/moon/RopeTest.unity
+    guid: 40807a7339c2bcd4a8df93ea78ad27ce
+  - enabled: 1
+    path: Assets/Scenes/Levels/moon/RopeDeliverTest.unity
+    guid: 31adde7094afdfb41914a3cd4a043cfc
+  - enabled: 1
+    path: Assets/Scenes/Levels/moon/RopeLevel1.unity
+    guid: b90f26c2d337c3346b8d4bb1969c5e84
+  - enabled: 1
+    path: Assets/Scenes/Levels/moon/RopeLevel2.unity
+    guid: 8e6f9247ec3d1204684c3de605f55836
+  - enabled: 1
+    path: Assets/Scenes/Levels/Planet4/SawObstaclesTest.unity
+    guid: 1575152ad05af294d87e372495dee2fd
+  - enabled: 1
+    path: Assets/Scenes/Levels/Planet3/PoligonFenceStreet.unity
+    guid: 45936ee651769d54bba71116eac6168f
+  - enabled: 1
+    path: Assets/Scenes/Levels/Planet3/JustMountains.unity
+    guid: a3f3d6e935d7ca94fa08af7f08ac15f3
+  - enabled: 1
+    path: Assets/Scenes/Levels/Planet2/AnotherLife.unity
+    guid: 283876e607aa4574ba16d92742d05a2c
+  - enabled: 1
+    path: Assets/Scenes/Levels/Planet3/PoligonNewLayers.unity
+    guid: a017625980a85a345a990e8138c15f62
+  - enabled: 1
+    path: Assets/Scenes/Levels/Planet3/MoonSurface.unity
+    guid: b653784d4220f7a44ae8bd0379a793ed
+  - enabled: 1
+    path: Assets/Scenes/Levels/Planet3/MoonSurface2.unity
+    guid: 1a42efdb83142ba4aac9568e4bb8e7e8
+  - enabled: 1
+    path: Assets/Scenes/Levels/Planet3/JustMountainsRly.unity
+    guid: f728fe69e97fd774caa31d95b80235aa
+  - enabled: 1
+    path: Assets/Scenes/Levels/Planet3/SimpleLayersParallax.unity
+    guid: 54a6471703fec0c4ca2c9099dbb61f6d
+  - enabled: 1
+    path: Assets/Scenes/Levels/Planet3/SimpleLayersParallax2.unity
+    guid: 5c00aca1255aa7343bda55cf8a8f8662
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/LonelyMoon/Awaking.unity"
+    guid: 087d88862df2d504499bad7980bfdf8b
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/LonelyMoon/AwakingSandbox.unity"
+    guid: c1e409776c8eb0f4fa948c638a1b39a5
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/LonelyMoon/AwakingSandboxRecolored.unity"
+    guid: 6f60a105ede992b42bcda9f08f3f385d
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/LonelyMoon/Cave.unity"
+    guid: 9542deb549fe7674b982aef6a7f7bcc1
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/LonelyMoon/FreeFlight.unity"
+    guid: f6dd987c5b38e74428e1ae25bc1e5694
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/LonelyMoon/MoonSurfacex.unity"
+    guid: b7fbccb77e02dce489dffd57ff861b55
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/LayeredCameraConcept/NaurotForestScene.unity"
+    guid: 1dc66953a3b4e1a4ebc8aed63b093059
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/LinearLandscape/YellowLineWorld.unity"
+    guid: 902e25f4695dc8640883198e94b6efd3
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/LinearLandscape/BlueWavyWorld.unity"
+    guid: 574a3dba207b67a43bff0568ae0f0885
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/LinearLandscape/BWWorld_Textured.unity"
+    guid: 3d6f16692deac2248bba022901c7b935
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/LinearLandscape/BWWorld_NoTextures.unity"
+    guid: 73a9a379e0aebdf42bcd3ac33d01b2a5
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/LinearLandscape/BWWorld_Textured Longer.unity"
+    guid: d12559883a43a2045ad57c06f1142eda
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/LinearLandscape/Green Misty Valley.unity"
+    guid: eb740f64389f8764fa185dd94489b191
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/Story/TheIsland.unity"
+    guid: 92723035d1643fd48aa4f03ae4d7f772
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/Story/Szkolenie/Tunnel.unity"
+    guid: d985393eb7618d64c86de7bdf00bc267
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/Story/Szkolenie/Generation_electric.unity"
+    guid: 191fa22f4d95ebb4ba80cffe74725a59
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/Story/Szkolenie/Generation_PlainStyle.unity"
+    guid: a364d7aaf18ae6a41834b2556d6810cf
+  m_configObjects: {}

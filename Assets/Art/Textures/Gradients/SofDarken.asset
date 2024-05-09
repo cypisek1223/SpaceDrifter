@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!28 &-6333786893122160743
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Gradient Texture
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 64
+  m_Height: 4
+  m_CompleteImageSize: 1404
+  m_MipsStripped: 0
+  m_TextureFormat: 5
+  m_MipCount: 7
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 1404
+  _typelessdata: fffafafafff7f7f7fff5f5f5fff2f2f2ffefefefffecececffe9e9e9ffe7e7e7ffe4e4e4ffe1e1e1ffdededeffdcdcdcffd9d9d9ffd6d6d6ffd3d3d3ffd0d0d0ffcececeffcbcbcbffc8c8c8ffc5c5c5ffc3c3c3ffc0c0c0ffbdbdbdffbababaffb7b7b7ffb5b5b5ffb2b2b2ffafafafffacacacffa9a9a9ffa7a7a7ffa4a4a4ffa1a1a1ff9e9e9eff9c9c9cff999999ff969696ff939393ff909090ff8e8e8eff8b8b8bff888888ff858585ff828282ff808080ff7d7d7dff7a7a7aff777777ff757575ff727272ff6f6f6fff6c6c6cff696969ff676767ff676767ff676767ff676767ff676767ff676767ff676767ff676767ff676767ff676767ff676767fffafafafff7f7f7fff5f5f5fff2f2f2ffefefefffecececffe9e9e9ffe7e7e7ffe4e4e4ffe1e1e1ffdededeffdcdcdcffd9d9d9ffd6d6d6ffd3d3d3ffd0d0d0ffcececeffcbcbcbffc8c8c8ffc5c5c5ffc3c3c3ffc0c0c0ffbdbdbdffbababaffb7b7b7ffb5b5b5ffb2b2b2ffafafafffacacacffa9a9a9ffa7a7a7ffa4a4a4ffa1a1a1ff9e9e9eff9c9c9cff999999ff969696ff939393ff909090ff8e8e8eff8b8b8bff888888ff858585ff828282ff808080ff7d7d7dff7a7a7aff777777ff757575ff727272ff6f6f6fff6c6c6cff696969ff676767ff676767ff676767ff676767ff676767ff676767ff676767ff676767ff676767ff676767ff676767fffafafafff7f7f7fff5f5f5fff2f2f2ffefefefffecececffe9e9e9ffe7e7e7ffe4e4e4ffe1e1e1ffdededeffdcdcdcffd9d9d9ffd6d6d6ffd3d3d3ffd0d0d0ffcececeffcbcbcbffc8c8c8ffc5c5c5ffc3c3c3ffc0c0c0ffbdbdbdffbababaffb7b7b7ffb5b5b5ffb2b2b2ffafafafffacacacffa9a9a9ffa7a7a7ffa4a4a4ffa1a1a1ff9e9e9eff9c9c9cff999999ff969696ff939393ff909090ff8e8e8eff8b8b8bff888888ff858585ff828282ff808080ff7d7d7dff7a7a7aff777777ff757575ff727272ff6f6f6fff6c6c6cff696969ff676767ff676767ff676767ff676767ff676767ff676767ff676767ff676767ff676767ff676767ff676767fffafafafff7f7f7fff5f5f5fff2f2f2ffefefefffecececffe9e9e9ffe7e7e7ffe4e4e4ffe1e1e1ffdededeffdcdcdcffd9d9d9ffd6d6d6ffd3d3d3ffd0d0d0ffcececeffcbcbcbffc8c8c8ffc5c5c5ffc3c3c3ffc0c0c0ffbdbdbdffbababaffb7b7b7ffb5b5b5ffb2b2b2ffafafafffacacacffa9a9a9ffa7a7a7ffa4a4a4ffa1a1a1ff9e9e9eff9c9c9cff999999ff969696ff939393ff909090ff8e8e8eff8b8b8bff888888ff858585ff828282ff808080ff7d7d7dff7a7a7aff777777ff757575ff727272ff6f6f6fff6c6c6cff696969ff676767ff676767ff676767ff676767ff676767ff676767ff676767ff676767ff676767ff676767ff676767fff8f8f8fff3f3f3ffedededffe8e8e8ffe2e2e2ffddddddffd7d7d7ffd1d1d1ffccccccffc6c6c6ffc1c1c1ffbbbbbbffb6b6b6ffb0b0b0ffaaaaaaffa5a5a5ff9f9f9fff9a9a9aff949494ff8f8f8fff898989ff838383ff7e7e7eff787878ff737373ff6d6d6dff686868ff676767ff676767ff676767ff676767ff676767fff8f8f8fff3f3f3ffedededffe8e8e8ffe2e2e2ffddddddffd7d7d7ffd1d1d1ffccccccffc6c6c6ffc1c1c1ffbbbbbbffb6b6b6ffb0b0b0ffaaaaaaffa5a5a5ff9f9f9fff9a9a9aff949494ff8f8f8fff898989ff838383ff7e7e7eff787878ff737373ff6d6d6dff686868ff676767ff676767ff676767ff676767ff676767fff5f5f5ffeaeaeaffdfdfdfffd4d4d4ffc9c9c9ffbebebeffb3b3b3ffa7a7a7ff9c9c9cff919191ff868686ff7b7b7bff707070ff676767ff676767ff676767ffefefefffd9d9d9ffc3c3c3ffadadadff969696ff808080ff6b6b6bff676767ffe4e4e4ffb8b8b8ff8b8b8bff696969ffcececeff7a7a7affa4a4a4
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0063f6dfc6b6a4688b090edb690ed5, type: 3}
+  m_Name: SofDarken
+  m_EditorClassIdentifier: 
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
+    key1: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
+    key2: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 0}
+    key3: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 0}
+    key4: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 0}
+    key5: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 53970
+    ctime2: 53970
+    ctime3: 65535
+    ctime4: 65535
+    ctime5: 65535
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  width: 64
+  texture: {fileID: -6333786893122160743}

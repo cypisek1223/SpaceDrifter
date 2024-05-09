@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PortalGateOverrideSruba
+  m_Controller: {fileID: 9100000, guid: f6f1e50e09ffd834b819077be620f648, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 28074f75509590b4fb13023acf3cb922, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 67ae6d6599ddf884581be7cd4c657981, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c659605b71142f242894d01d4a38ee10, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 73291e16d5055774f8fdbceb08180dd8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 63dbe9c27dc90c24caaf48d71c74bb9b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8129b37e6f2aa6642ad880c863dba435, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 211bcfab52f1ddd4da18a3436e4cd55a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9180b60ecd5e25e48b4636e09cb99494, type: 2}

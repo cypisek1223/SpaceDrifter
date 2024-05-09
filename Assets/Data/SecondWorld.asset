@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd6d60f20cb7a14da7511941fbb0934, type: 3}
+  m_Name: SecondWorld
+  m_EditorClassIdentifier: 
+  name: Enigma Planet
+  description: Blue World to test player
+  backgroundMat: {fileID: 2100000, guid: fa13ec9e489d1e8428c5fcf2f4ce7e1f, type: 2}
+  splashMat: {fileID: 2100000, guid: 30a042998b201654a93db6c3522f90c2, type: 2}
+  themePrimaryColor: {r: 0, g: 0.65882355, b: 0.9019608, a: 1}
+  themeLightColor: {r: 0.33490568, g: 0.8215599, b: 1, a: 1}
+  themeDarkColor: {r: 0.03137255, g: 0.16078432, b: 0.21176471, a: 1}
+  levelList:
+  - name: Challange
+    scene: SecondChallenge
+    levelType: 1
+    fade: 1
+    locked: 0
+  - name: Second Chance
+    scene: SecondChance
+    levelType: 1
+    fade: 1
+    locked: 0
+  - name: New Life
+    scene: SecondLife
+    levelType: 1
+    fade: 1
+    locked: 0
+  - name: Another Life
+    scene: AnotherLife
+    levelType: 1
+    fade: 1
+    locked: 0
+  - name: MoonCave
+    scene: MoonSurface2
+    levelType: 1
+    fade: 1
+    locked: 0
+  locked: 0

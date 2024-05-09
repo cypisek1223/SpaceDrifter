@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SimpleShip
+  m_Controller: {fileID: 9100000, guid: 5ddca2ad52e83b04d9bbac642144f03f, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 7f497709d9c4ac84db18d3644b81d541, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e84d06ad0e8869747be834a4fce4f27b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 72ae6b1257924d94db44ca35ff0a66db, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 11b378bdf97c2bb4eacbd8e16ad86ac8, type: 2}
