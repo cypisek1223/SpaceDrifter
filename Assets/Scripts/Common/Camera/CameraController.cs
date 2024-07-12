@@ -7,10 +7,14 @@ namespace SpaceDrifter2D
 {
     public class CameraController : Singleton<CameraController>
     {
+
         [SerializeField] private PlayerController player;
         [SerializeField] private CameraOrthoSizer cameraSizer;
         [SerializeField] private CameraBoundsController boundsSetter;
         [SerializeField] private BackgroundSetter backgroundSetter;
+       //public CameraBeforPlayer cameraBeforPlayer;
+
+
 
         [SerializeField] CinemachineVirtualCamera gameplayVcam;
 
@@ -47,7 +51,7 @@ namespace SpaceDrifter2D
 
         public void SetBackgroundMaterialAndColor(Material mat, Color primCol, Color secndCol)
         {
-            backgroundSetter.SetBackgroundMaterialAndColor(mat, primCol, secndCol);
+            //backgroundSetter.SetBackgroundMaterialAndColor(mat, primCol, secndCol);
         }
     }
 }

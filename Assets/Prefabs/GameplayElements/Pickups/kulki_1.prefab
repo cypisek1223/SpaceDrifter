@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 7561504669873810689}
   - component: {fileID: 1052267858044709009}
   - component: {fileID: 5268323312913415337}
-  - component: {fileID: 763087326978325945}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: kulki_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,15 +120,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &763087326978325945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8568097973089266226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 248e45920b460bc429f39f22911cbc8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
