@@ -16,6 +16,8 @@ namespace SpaceDrifter2D
         protected float power;
         [SerializeField] float fuelUsagePerSecond = 10;
 
+        public float availableFuel;
+
         [SerializeField] FuelTank tank;
         Rigidbody2D rb;
 
@@ -58,9 +60,9 @@ namespace SpaceDrifter2D
         #endregion
 
         #region Mechanics Methods
-        private void Thrust()
+        public void Thrust()
         {
-            float availableFuel = tank ? tank.UseFuel(fuelUsagePerSecond * Time.deltaTime * power / MaxPower) : fuelUsagePerSecond * Time.deltaTime * power / MaxPower;
+             availableFuel = tank ? tank.UseFuel(fuelUsagePerSecond * Time.deltaTime * power / MaxPower) : fuelUsagePerSecond * Time.deltaTime * power / MaxPower;
 
             if (availableFuel > 0)
             {
