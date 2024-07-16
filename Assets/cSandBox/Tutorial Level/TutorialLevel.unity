@@ -12382,6 +12382,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8192
   detectionRadius: 0.5
+  magnetRadius: 5
+  magnetForce: 15
   detectionPoint: {fileID: 986726747}
 --- !u!114 &986726742
 MonoBehaviour:

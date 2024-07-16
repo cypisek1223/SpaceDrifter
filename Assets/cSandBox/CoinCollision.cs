@@ -7,17 +7,40 @@ namespace SpaceDrifter2D
 {
     public class CoinCollision : PoolEmitter
     {
+        [SerializeField] LayerMask coinLayer;
 
+        [Header("Coin Collecting")]
         private Type t = typeof(TextMesh);
 
-        public LayerMask coinLayer;
+        [SerializeField] float detectionRadius = 0.5f;
 
-        public float detectionRadius = 0.5f;
+        [Header("Coin Magnet")]
+        [SerializeField] float magnetRadius = 1f;
+        [SerializeField] float magnetForce = 10f;
 
-        //OPTIONAL
-        public Transform detectionPoint;
+        [Header("Optional")]
+        [SerializeField] Transform detectionPoint;
 
         private void Update()
+        {
+            AttractingCoin();
+            CoinsCollecting();
+        }
+        private void AttractingCoin()
+        {
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(detectionPoint.position, magnetRadius, coinLayer);
+
+            foreach (var collider in colliders)
+            {
+                //Co robi normalized
+                Vector2 direction = (transform.position - collider.transform.position).normalized;
+
+                Vector2 newPosition = Vector2.MoveTowards(collider.transform.position, transform.position, magnetForce * Time.fixedDeltaTime);
+
+                collider.transform.position = newPosition;
+            }
+        }
+        private void CoinsCollecting()
         {
             Collider2D[] hitColliders = Physics2D.OverlapCircleAll(detectionPoint.position, detectionRadius, coinLayer);
 
@@ -36,7 +59,6 @@ namespace SpaceDrifter2D
                 Destroy(hitCollider.gameObject);
             }
         }
-
         private void OnDrawGizmos()
         {
             if (detectionPoint == null)

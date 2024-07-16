@@ -5,25 +5,25 @@ public class TutorialManager : MonoBehaviour
     public static TutorialManager tutorialManager;
 
     [Header("Player Stats")]
-    public Rigidbody2D playerRb2D;
+    [SerializeField] Rigidbody2D playerRb2D;
 
-    public ParticleSystem smokeParticles;
-    public ParticleSystem fireParticles;
+    [SerializeField] ParticleSystem smokeParticles;
+    [SerializeField] ParticleSystem fireParticles;
 
     [Header("Camers")]
-    public GameObject cmMeni;
-    public GameObject cmGamePlay;
+    [SerializeField] GameObject cmMeni;
+    [SerializeField] GameObject cmGamePlay;
 
     [Header("Canvas and Animations")]
-    public Canvas controllerCanvas;
-    public Canvas menuCanvas;
+    [SerializeField] Canvas controllerCanvas;
+    [SerializeField] Canvas menuCanvas;
 
-    public Animator menuAnim;
-    public Animator controllerCanvasAnim;
+    [SerializeField] Animator menuAnim;
+    [SerializeField] Animator controllerCanvasAnim;
 
     [Header("Level Start Animations")]
-    public Animator startLevelAnimator;
-    public Animator countDownAnim;
+    [SerializeField] Animator startLevelAnimator;
+    [SerializeField] Animator countDownAnim;
 
     private void Awake()
     {
