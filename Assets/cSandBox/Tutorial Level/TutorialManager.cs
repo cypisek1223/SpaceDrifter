@@ -15,6 +15,8 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] GameObject cmGamePlay;
 
     [Header("Canvas and Animations")]
+    [SerializeField] Canvas ScoreKeeper;
+
     [SerializeField] Canvas controllerCanvas;
     [SerializeField] Canvas menuCanvas;
 
@@ -24,6 +26,9 @@ public class TutorialManager : MonoBehaviour
     [Header("Level Start Animations")]
     [SerializeField] Animator startLevelAnimator;
     [SerializeField] Animator countDownAnim;
+
+
+
 
     private void Awake()
     {
@@ -45,8 +50,10 @@ public class TutorialManager : MonoBehaviour
         cmMeni.SetActive(true);
         cmGamePlay.SetActive(false);
 
+        ScoreKeeper.enabled = false;
         controllerCanvas.enabled = false;
         menuCanvas.enabled = true;
+
 
         smokeParticles.Stop();
         fireParticles.Stop();
@@ -79,6 +86,8 @@ public class TutorialManager : MonoBehaviour
         //TO CHANGE WHEN PRESSED, IT JUST HAS TO FLY
         smokeParticles.Play();
         fireParticles.Play();
+
+        ScoreKeeper.enabled = true;
     }
 
     public void OnPlayerParticles()

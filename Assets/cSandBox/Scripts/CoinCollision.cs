@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using UnityEngine;
 namespace SpaceDrifter2D
 {
     public class CoinCollision : PoolEmitter
@@ -13,6 +12,9 @@ namespace SpaceDrifter2D
         private Type t = typeof(TextMesh);
 
         [SerializeField] float detectionRadius = 0.5f;
+
+        [SerializeField] Animator coinCollectedAnim;
+        [SerializeField] bool isAnimationComplete;
 
         [Header("Coin Magnet")]
         [SerializeField] float magnetRadius = 1f;
@@ -55,7 +57,10 @@ namespace SpaceDrifter2D
                 //particle.Play();
 
                 ScoreKeeper.Instance.CoinCollect();
-
+               
+                if(coinCollectedAnim != null)
+                coinCollectedAnim.Play("coinCollected");
+                
                 Destroy(hitCollider.gameObject);
             }
         }
