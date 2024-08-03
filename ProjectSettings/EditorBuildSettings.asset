@@ -137,4 +137,10 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/Nowe\u015Awiaty/Story/Szkolenie/Generation_PlainStyle.unity"
     guid: a364d7aaf18ae6a41834b2556d6810cf
+  - enabled: 1
+    path: Assets/cSandBox/Tutorial Level/Scens/TutorialLevel.unity
+    guid: 2ace40e35194b4d45a34e8b7e16f351b
+  - enabled: 1
+    path: Assets/cSandBox/Tutorial Level/Scens/LevelMenu.unity
+    guid: 149078c06dacc5844a0bff9344d59f3c
   m_configObjects: {}

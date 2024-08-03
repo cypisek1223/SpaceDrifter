@@ -17,6 +17,7 @@ namespace SpaceDrifter2D
         [SerializeField] private TextMeshProUGUI starsText;
 
         private LevelData level;
+        //private LevelData level;
         private LevelListPanel levelsDisplay;
 
         public void Init(LevelData level, LevelListPanel levelsListPanel)

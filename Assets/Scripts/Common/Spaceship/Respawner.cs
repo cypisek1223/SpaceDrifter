@@ -21,6 +21,8 @@ namespace SpaceDrifter2D
         [SerializeField] private float jumpMaxPower = 10;
 
         [SerializeField] ParticleSystem spawnEffect;
+        [SerializeField] ParticleSystem smokeEffect;
+        [SerializeField] ParticleSystem fireEffect;
 
         private EntrancePicker respawnPicker;
 
@@ -62,7 +64,6 @@ namespace SpaceDrifter2D
             LeanTween.scale(powerImage.gameObject, Vector3.one * 1.1f, 0.1f).setRepeat(7).setEase(LeanTweenType.pingPong);
             playerController.Rb.transform.localScale = Vector3.zero;
             LeanTween.scale(playerController.Rb.gameObject, Vector3.one, 0.5f).setEase( LeanTweenType.easeOutQuint );
-
         }
 
         private void SpawnEffect()
@@ -79,8 +80,13 @@ namespace SpaceDrifter2D
                 LeanTween.cancel(powerId);
                 LeanTween.cancel(colorId);
                 playerController.Unpause();
+
+                
                 playerController.Rb.AddForce(playerController.Rb.transform.up * power, ForceMode2D.Impulse);
                 powerImage.enabled = false;
+
+                //smokeEffect.Play();
+                //fireEffect.Play();
             }
         }
 

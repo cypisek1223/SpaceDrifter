@@ -21,10 +21,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ae31283cf1762af4ab45e44d79f3417a, type: 2}
   - {fileID: 11400000, guid: 41e00a71b28126e4db4ead28fa0016a1, type: 2}
   - {fileID: 11400000, guid: c1995facfeeef7a4c8691dfe06201086, type: 2}
-  - {fileID: 11400000, guid: 5453bd5b3d5eddc4ca77d6a97a140bc7, type: 2}
+  - {fileID: 11400000, guid: 0c484646b3862ff439df00ca85e7811f, type: 2}
   mainMenu:
-    name: Main Menu
-    scene: MainMenu
+    name: TutorialLevel
+    scene: LevelMenu
     levelType: 0
     fade: 1
     locked: 1

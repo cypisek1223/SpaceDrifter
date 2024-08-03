@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd6d60f20cb7a14da7511941fbb0934, type: 3}
+  m_Name: TutorialLevel
+  m_EditorClassIdentifier: 
+  name: Level1
+  description: Very high planet with lots of dead ends
+  backgroundMat: {fileID: 2100000, guid: db3919b00d1531144b7fe0bfa80278e6, type: 2}
+  splashMat: {fileID: 2100000, guid: a02900bdcc5a2aa4c9082c542af1a299, type: 2}
+  themePrimaryColor: {r: 0.21382427, g: 0, b: 1, a: 1}
+  themeLightColor: {r: 0.47487593, g: 0, b: 1, a: 1}
+  themeDarkColor: {r: 0, g: 0, b: 0, a: 1}
+  levelList:
+  - name: Level1
+    scene: Generation_PlainStyle
+    levelType: 2
+    fade: 1
+    locked: 0
+    seed: 1
+    length: 10
+  - name: Level2
+    scene: Generation_electric
+    levelType: 2
+    fade: 1
+    locked: 0
+    seed: 1
+    length: 10
+  - name: Level3
+    scene: Tunnel
+    levelType: 2
+    fade: 1
+    locked: 0
+    seed: 1
+    length: 10
+  - name: Level4
+    scene: Tunnel
+    levelType: 2
+    fade: 1
+    locked: 0
+    seed: 1
+    length: 10
+  - name: Level5
+    scene: Tunnel
+    levelType: 2
+    fade: 1
+    locked: 0
+    seed: 1
+    length: 10
+  locked: 0

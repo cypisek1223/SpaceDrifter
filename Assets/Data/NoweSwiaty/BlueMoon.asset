@@ -25,44 +25,62 @@ MonoBehaviour:
     levelType: 1
     fade: 1
     locked: 0
+    seed: 1
+    length: 10
   - name: Blue World
     scene: BlueWavyWorld
     levelType: 1
     fade: 1
     locked: 0
+    seed: 1
+    length: 10
   - name: Black and White
     scene: BWWorld_Textured
     levelType: 1
     fade: 1
     locked: 0
+    seed: 1
+    length: 10
   - name: Black and White greened
     scene: BWWorld_NoTextures
     levelType: 1
     fade: 1
     locked: 0
+    seed: 1
+    length: 10
   - name: Cave Entrance
     scene: BWWorld_Textured Longer
     levelType: 1
     fade: 1
     locked: 0
+    seed: 1
+    length: 10
   - name: Green Misty Valley
     scene: Green Misty Valley
     levelType: 1
     fade: 1
     locked: 0
+    seed: 1
+    length: 10
   - name: LevelGeneration
-    scene: Generation
+    scene: Initialisation
     levelType: 2
     fade: 1
     locked: 0
+    seed: 1
+    length: 10
   - name: 4
     scene: MoonSurfacex
     levelType: 1
     fade: 1
     locked: 0
+    seed: 1
+    length: 10
   - name: Naruto
     scene: NaurotForestScene
     levelType: 1
     fade: 1
     locked: 0
+    seed: 1
+    length: 10
   locked: 0

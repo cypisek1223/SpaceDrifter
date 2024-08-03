@@ -38,6 +38,16 @@ namespace SpaceDrifter2D
         public void SetPlayerStartPos(Vector3 startPos, Quaternion startRot)
         {
             playerController.SetStartPosition(startPos, startRot);
+
+            //Cyprian Added this
+            //LevelLoader.SceneFaded += OnLevelInitiated;
+            //LevelLoader.SceneLoaded += OnLevelLoaded;
+            //LevelLoader.SceneRevealed += OnLevelReady;
+            //
+            //GameManager.GamePaused += OnPaused;
+            //GameManager.GameResumed += OnResumed;
+            //GameManager.LevelFinished += OnLevelFinished;
+            //GameManager.PlayerKilled += OnPlayerKilled;
         }
 
         private void OnPlayerKilled(LevelData level)
@@ -83,8 +93,10 @@ namespace SpaceDrifter2D
 
                 case LevelType.Arcade:
                 case LevelType.Generated:
-                    playerController.SetInnerGlowColor(level.Planet.LightColor);
-                    CameraController.Instance.SetBackgroundMaterialAndColor(level.Planet.BackgroundMat, level.Planet.LightColor, level.Planet.DarkColor);
+                    //Cyprian Coment it 
+                    //playerController.SetInnerGlowColor(Color.red);
+                    //playerController.SetInnerGlowColor(level.Planet.LightColor);
+                    //CameraController.Instance.SetBackgroundMaterialAndColor(level.Planet.BackgroundMat, level.Planet.LightColor, level.Planet.DarkColor);
                     ScoreKeeper.Instance.InitLevel(level);
                     InputHandler.Instance.Activate();
                     CameraController.SetActive(true);
@@ -101,13 +113,15 @@ namespace SpaceDrifter2D
 
                 case LevelType.Arcade:
                 case LevelType.Generated:
-                    SplashManager.Instance.PaintAllSplashes(level.Planet.SplashMat, level.Planet.LightColor, level.Planet.DarkColor);
-                    LevelManager.Instance.PaintMaps(level.Planet.PrimaryColor);
+                    //Cyprian Coment it
+                    //SplashManager.Instance.PaintAllSplashes(level.Planet.SplashMat, level.Planet.LightColor, level.Planet.DarkColor);
+                    //LevelManager.Instance.PaintMaps(level.Planet.PrimaryColor);
+                    //TUTAJ TRZEBA DODAC PRZELACZA NIE KAMERY I PARTICLE
                     playerController.gameObject.SetActive(true);
                     playerController.Hide();
                     playerController.Pause();
                     CameraController.Instance.SetInitialPosition(respawner.Position);
-                    //inGameMenu.Show();
+                    inGameMenu.Show();
                     break;
             }
         }

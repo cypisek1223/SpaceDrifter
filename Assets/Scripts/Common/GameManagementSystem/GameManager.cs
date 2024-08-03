@@ -14,6 +14,7 @@ namespace SpaceDrifter2D
 
         //To add Game Finished and Started events, etc...
 
+    
 
         private void Start()
         {
@@ -84,9 +85,18 @@ namespace SpaceDrifter2D
         {
             Instance.dataManager.InMenu = false;
             SetCurrentPlanet(level.Planet);
+            Instance.dataManager.CurrentPlanet.SetCurrentLevel(level);       
+            LevelLoader.LoadLevel(level);
+        }
+        //CYPRIAN ADDED THIS
+        public static void LevelLoad(LevelData level, PlanetData planet)
+        {
+            Instance.dataManager.InMenu = false;            
+            SetCurrentPlanet(planet);
             Instance.dataManager.CurrentPlanet.SetCurrentLevel(level);
             LevelLoader.LoadLevel(level);
         }
+        //END
         public static void NextLevel()
         {
             var dm = Instance.dataManager;
