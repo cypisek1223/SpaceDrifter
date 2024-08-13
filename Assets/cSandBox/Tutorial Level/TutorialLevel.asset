@@ -55,4 +55,11 @@ MonoBehaviour:
     locked: 0
     seed: 1
     length: 10
+  - name: TutorialLevel
+    scene: TutorialLevel
+    levelType: 2
+    fade: 1
+    locked: 0
+    seed: 1
+    length: 10
   locked: 0

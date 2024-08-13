@@ -62,7 +62,6 @@ public class TutorialManager : MonoBehaviour
     public void StartButton()
     {
         Debug.Log("START !!!");
-        //playerRb2D.bodyType = RigidbodyType2D.Dynamic;
 
         cmMeni.SetActive(false);
         cmGamePlay.SetActive(true);
@@ -88,6 +87,7 @@ public class TutorialManager : MonoBehaviour
         fireParticles.Play();
 
         ScoreKeeper.enabled = true;
+        Debug.Log("PLAYER ON");
     }
 
     public void OnPlayerParticles()

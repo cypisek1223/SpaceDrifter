@@ -37,6 +37,8 @@ namespace SpaceDrifter2D
             coinsText.text = "0";
             time = new TimeSpan(0);
             timeText.text = time.ToString("mm\\:ss");
+
+            //ADD LEVEL ID THIS 
         }
 
         public void StartLevel()
@@ -102,6 +104,12 @@ namespace SpaceDrifter2D
         private void Hide()
         {
             displayPanel.SetActive(false);
+        }
+
+        public float GetTime()
+        {
+            float levelTime = (float)time.TotalSeconds;
+            return levelTime;
         }
     }
 }

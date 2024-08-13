@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!43 &1778062447
+--- !u!43 &650850579
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2597,8 +2597,8 @@ MonoBehaviour:
   - {x: -0.06854612, y: -0.38627476, z: 0}
   - {x: -1.0466299, y: -0.51713705, z: 0}
   m_ShapePathHash: 1017885050
-  m_Mesh: {fileID: 1778062447}
-  m_InstanceId: 124772
+  m_Mesh: {fileID: 650850579}
+  m_InstanceId: 56556
   m_LocalBounds:
     m_Center: {x: 0.034712553, y: 0.024199724, z: 0}
     m_Extent: {x: 1.0813425, y: 0.5413368, z: 0}
@@ -3295,6 +3295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1997798030502204302}
   - component: {fileID: 7701063963867466768}
+  - component: {fileID: 7701063963867466770}
   m_Layer: 0
   m_Name: ScoreKeeper
   m_TagString: Untagged
@@ -16255,6 +16256,59 @@ MonoBehaviour:
   levelStats: {fileID: 2010022495610460664}
   coinsText: {fileID: 3281379095365071268}
   timeText: {fileID: 7759154171522186159}
+--- !u!114 &7701063963867466770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2180851158954426126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9957e3c0d799aea46acef274e47e2df2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels:
+  - levelId: 0
+    lowTime: 100
+    mediumTime: 200
+    stars: 0
+  - levelId: 0
+    lowTime: 100
+    mediumTime: 200
+    stars: 0
+  - levelId: 0
+    lowTime: 100
+    mediumTime: 200
+    stars: 0
+  - levelId: 0
+    lowTime: 100
+    mediumTime: 200
+    stars: 0
+  - levelId: 0
+    lowTime: 100
+    mediumTime: 200
+    stars: 0
+  - levelId: 0
+    lowTime: 100
+    mediumTime: 200
+    stars: 0
+  - levelId: 0
+    lowTime: 100
+    mediumTime: 200
+    stars: 0
+  - levelId: 0
+    lowTime: 100
+    mediumTime: 200
+    stars: 0
+  - levelId: 0
+    lowTime: 100
+    mediumTime: 200
+    stars: 0
+  - levelId: 0
+    lowTime: 100
+    mediumTime: 200
+    stars: 0
 --- !u!224 &7744116680900904077
 RectTransform:
   m_ObjectHideFlags: 0

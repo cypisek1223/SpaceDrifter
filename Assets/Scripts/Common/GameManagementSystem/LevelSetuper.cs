@@ -116,7 +116,7 @@ namespace SpaceDrifter2D
                     //Cyprian Coment it
                     //SplashManager.Instance.PaintAllSplashes(level.Planet.SplashMat, level.Planet.LightColor, level.Planet.DarkColor);
                     //LevelManager.Instance.PaintMaps(level.Planet.PrimaryColor);
-                    //TUTAJ TRZEBA DODAC PRZELACZA NIE KAMERY I PARTICLE
+                    //TUTAJ TRZEBA DODAC PRZELACZANIE KAMERY I PARTICLE
                     playerController.gameObject.SetActive(true);
                     playerController.Hide();
                     playerController.Pause();
