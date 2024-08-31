@@ -38,16 +38,6 @@ namespace SpaceDrifter2D
         public void SetPlayerStartPos(Vector3 startPos, Quaternion startRot)
         {
             playerController.SetStartPosition(startPos, startRot);
-
-            //Cyprian Added this
-            //LevelLoader.SceneFaded += OnLevelInitiated;
-            //LevelLoader.SceneLoaded += OnLevelLoaded;
-            //LevelLoader.SceneRevealed += OnLevelReady;
-            //
-            //GameManager.GamePaused += OnPaused;
-            //GameManager.GameResumed += OnResumed;
-            //GameManager.LevelFinished += OnLevelFinished;
-            //GameManager.PlayerKilled += OnPlayerKilled;
         }
 
         private void OnPlayerKilled(LevelData level)

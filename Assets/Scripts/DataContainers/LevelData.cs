@@ -8,6 +8,10 @@ namespace SpaceDrifter2D
     public class LevelData
     {
         public string Name => name;
+
+        //Cyprian ADDED THIS
+        public int levelID = 0;
+        //
         public string Scene => scene;
         public LevelType Type => levelType;
         public bool Fade => fade;
@@ -35,6 +39,8 @@ namespace SpaceDrifter2D
         [SerializeField] int seed = 1;
         [EnableIf("levelType", LevelType.Generated)]
         [SerializeField] int length = 10;
+
+       
 
         public void SetPlanet(PlanetData planet)
         {

@@ -23,6 +23,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c1995facfeeef7a4c8691dfe06201086, type: 2}
   - {fileID: 11400000, guid: 0c484646b3862ff439df00ca85e7811f, type: 2}
   mainMenu:
+    levelID: 0
     name: TutorialLevel
     scene: LevelMenu
     levelType: 0

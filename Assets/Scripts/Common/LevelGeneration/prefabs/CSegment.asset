@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d421eac10fccde46af4314542de4dbe, type: 3}
+  m_Name: CSegment
+  m_EditorClassIdentifier: 
+  segments:
+  - {fileID: 5938089018511096130, guid: 17f3e5989b7c52c498d786733fcbfab6, type: 3}
+  - {fileID: 2786780257078595660, guid: 994006adb265034409c8c44d0770916a, type: 3}
+  exits:
+  - {fileID: 8178023766435672655, guid: bab365e314e1344489ad89b1fb524cb5, type: 3}
+  rules:
+  - {fileID: 11400000, guid: e93a22267051a0445b58266f3350fdff, type: 2}

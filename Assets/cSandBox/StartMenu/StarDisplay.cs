@@ -4,28 +4,31 @@ using UnityEngine.UI;
 using UnityEngine;
 using System;
 
-public class StarDisplay : MonoBehaviour
+namespace SpaceDrifter2D
 {
-    public Image[] starImages;
-    private LevelTimeManager levelTimeManager;
-    public int levelId = 1;
-
-
-    void Start()
+    public class StarDisplay : MonoBehaviour
     {
-        //DO ZMIANY
-        levelTimeManager = FindObjectOfType<LevelTimeManager>();
-        UpdateStarDisplay();
-    }
+        public Image[] starImages;
+        private ScoreKeeper scoreKeeper;
+        public int levelId = 1;
 
-    private void UpdateStarDisplay()
-    {
-        int stars = levelTimeManager.GetStars(levelId);
 
-        for(int i =0; i < starImages.Length; i++)
+        void Start()
         {
-            //NIE CZAJE TEGO
-            starImages[i].enabled = i < stars;
+            //DO ZMIANY
+            scoreKeeper = FindObjectOfType<ScoreKeeper>();
+            UpdateStarDisplay();
+        }
+
+        private void UpdateStarDisplay()
+        {
+            int stars = scoreKeeper.GetStars(levelId);
+            
+            for (int i = 0; i < starImages.Length; i++)
+            {
+                //NIE CZAJE TEGO
+                starImages[i].enabled = i < stars;
+            }
         }
     }
 }

@@ -13,6 +13,9 @@ TagManager:
   - Damage
   - Rock
   - Fluffy
+  - ID
+  - ScoreKeeper
+  - FinishLevelPanel
   layers:
   - Default
   - TransparentFX
@@ -29,7 +32,7 @@ TagManager:
   - Rocks
   - Coins
   - 
-  - 
+  - BackGround
   - 
   - 
   - 

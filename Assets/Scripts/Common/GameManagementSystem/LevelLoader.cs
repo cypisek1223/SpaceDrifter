@@ -25,8 +25,7 @@ namespace SpaceDrifter2D
 
         [SerializeField] private GameObject gamePlayCamera;
         public static void LoadLevel(LevelData level)
-        {
-            Debug.Log("LOAD LEVEL");
+        {           
             SceneLoadingInitiated?.Invoke( Instance.targetLevel );
 
             Instance.targetLevel = level;
@@ -38,7 +37,6 @@ namespace SpaceDrifter2D
             //END
             if (Instance.currentLevel != null && Instance.currentLevel.Fade ) // no currentLevel means we just started the Game
             {
-                Debug.Log("IF");
                 //Begin fading and wait for it. Begin actual loading when faded
 
                 //SOMETHING NEEDS TO CHANGE TO WORK THE SAME AS SEBASTIAN'S
@@ -47,7 +45,6 @@ namespace SpaceDrifter2D
             }
             else
             {
-                Debug.Log("ELSE");
                 Instance.BeginLoading();
             }
 

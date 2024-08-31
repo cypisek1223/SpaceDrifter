@@ -87,7 +87,6 @@ public class TutorialManager : MonoBehaviour
         fireParticles.Play();
 
         ScoreKeeper.enabled = true;
-        Debug.Log("PLAYER ON");
     }
 
     public void OnPlayerParticles()

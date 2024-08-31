@@ -14,6 +14,8 @@ namespace SpaceDrifter2D
 
         [SerializeField] private PlayerController playerController;
 
+        
+
         // Jump out of respawn settings
         [SerializeField] private Image powerImage;
         [SerializeField] private float jumpDuration = 7;
@@ -23,6 +25,10 @@ namespace SpaceDrifter2D
         [SerializeField] ParticleSystem spawnEffect;
         [SerializeField] ParticleSystem smokeEffect;
         [SerializeField] ParticleSystem fireEffect;
+
+        [Header("Start Portal")]
+        [SerializeField] GameObject startPortal;
+        [SerializeField] Animator portalAnimation;
 
         private EntrancePicker respawnPicker;
 
@@ -40,6 +46,7 @@ namespace SpaceDrifter2D
         private void Start()
         {
             powerImage.enabled = false;
+            //startPortal.SetActive(true);
         }
 
         private StartSpot PickExit()
@@ -53,19 +60,34 @@ namespace SpaceDrifter2D
             playerController.Respawn(exit, 1);
 
 
-            rotateId = LeanTween.rotateAround(playerController.Rb.gameObject, Vector3.forward, 360, 1).setRepeat(-1).setOnUpdate(Rotating).id;
-            moveId = LeanTween.move(playerController.Rb.gameObject, exit.transform.position + exit.transform.up * jumpDistance, jumpDuration).setEase(LeanTweenType.easeOutQuint).setOnStart(SpawnEffect).id;
-            power = jumpMaxPower * playerController.Rb.mass;
-            powerImage.enabled = true;
-            powerId = LeanTween.value(power, 0, jumpDuration).setEase(LeanTweenType.easeOutQuint).setOnUpdate((v) => { power = v; powerImage.fillAmount = v/(jumpMaxPower * playerController.Rb.mass); }).id;
-            powerImage.color = Color.red;
-            colorId = LeanTween.color(powerImage.rectTransform, Color.white, jumpDuration).id;
+            //rotateId = LeanTween.rotateAround(playerController.Rb.gameObject, Vector3.forward, 360, 1).setRepeat(-1).setOnUpdate(Rotating).id;
+            //moveId = LeanTween.move(playerController.Rb.gameObject, exit.transform.position + exit.transform.up * jumpDistance, jumpDuration).setEase(LeanTweenType.easeOutQuint).setOnStart(SpawnEffect).id;
+            power = jumpMaxPower * playerController.Rb.mass * 2f;
+            //powerImage.enabled = true;
+            //powerId = LeanTween.value(power, 0, jumpDuration).setEase(LeanTweenType.easeOutQuint).setOnUpdate((v) => { power = v; powerImage.fillAmount = v/(jumpMaxPower * playerController.Rb.mass); }).id;
+            //powerImage.color = Color.red;
+            //colorId = LeanTween.color(powerImage.rectTransform, Color.white, jumpDuration).id;
             LeanTween.alpha(powerImage.rectTransform, 0.5f, 0.1f).setRepeat(7).setEase(LeanTweenType.easeInOutBounce);
             LeanTween.scale(powerImage.gameObject, Vector3.one * 1.1f, 0.1f).setRepeat(7).setEase(LeanTweenType.pingPong);
             playerController.Rb.transform.localScale = Vector3.zero;
+            //CYPRIAN ADD THIS
+            Portal();
+            Invoke(nameof(PlayerRb), 1.5f);
+
             LeanTween.scale(playerController.Rb.gameObject, Vector3.one, 0.5f).setEase( LeanTweenType.easeOutQuint );
         }
 
+        public void Portal()
+        {
+            startPortal.SetActive(true);
+            startPortal.transform.position = playerController.transform.position;
+            startPortal.transform.rotation = playerController.transform.rotation;
+            portalAnimation.Play("StartTutorial");
+        }
+        public void PlayerRb()
+        {
+            playerController.Rb.bodyType = RigidbodyType2D.Dynamic;
+        }
         private void SpawnEffect()
         {
             ParticleSystem ps = Instantiate(spawnEffect, playerController.Rb.position, Quaternion.identity);

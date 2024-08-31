@@ -48,7 +48,6 @@ namespace SpaceDrifter2D
 
             foreach (var hitCollider in hitColliders)
             {
-                Debug.Log("Coin collected");
                 //Destroy(hitCollider.gameObject);
                 //hitCollider.gameObject.active = false;
 
