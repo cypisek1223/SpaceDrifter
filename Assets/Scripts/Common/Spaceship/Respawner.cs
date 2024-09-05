@@ -70,9 +70,8 @@ namespace SpaceDrifter2D
             LeanTween.alpha(powerImage.rectTransform, 0.5f, 0.1f).setRepeat(7).setEase(LeanTweenType.easeInOutBounce);
             LeanTween.scale(powerImage.gameObject, Vector3.one * 1.1f, 0.1f).setRepeat(7).setEase(LeanTweenType.pingPong);
             playerController.Rb.transform.localScale = Vector3.zero;
-            //CYPRIAN ADD THIS
             Portal();
-            Invoke(nameof(PlayerRb), 1.5f);
+            Invoke(nameof(PlayerRb), 1.15f);
 
             LeanTween.scale(playerController.Rb.gameObject, Vector3.one, 0.5f).setEase( LeanTweenType.easeOutQuint );
         }
@@ -82,13 +81,17 @@ namespace SpaceDrifter2D
             startPortal.SetActive(true);
             startPortal.transform.position = playerController.transform.position;
             startPortal.transform.rotation = playerController.transform.rotation;
-            portalAnimation.Play("StartTutorial");
+            portalAnimation.Play("StartTutorial"); 
         }
         public void PlayerRb()
         {
             playerController.Rb.bodyType = RigidbodyType2D.Dynamic;
             smokeEffect.SetActive(true);
             fireEffect.SetActive(true);
+        }
+        public void CountdownStarts()
+        {
+            
         }
         private void SpawnEffect()
         {

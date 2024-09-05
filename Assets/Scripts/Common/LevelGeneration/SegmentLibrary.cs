@@ -6,32 +6,34 @@ namespace SpaceDrifter2D
     [CreateAssetMenu(fileName ="SegmentLibrary", menuName = "ScriptableObjects/SegmentLibrary")]
     public class SegmentLibrary : ScriptableObject
     { 
-        [SerializeField] Segment_MB[] segments;
+        [SerializeField] public Segment_MB[] segments;
         [SerializeField] Segment_MB[] exits;
         [SerializeField] SegmentPlacementRule[] rules;
+
+        //CYPRIAN ADD THIS
+        public int indexSegment = 0;
          
         private Random r;
         public void Init(int seed) // seed for repeatability
         {
             r = new Random(seed);
+            indexSegment = 0;
         }
 
-        //public Segment_MB SpawnSegment(Segment_MB prev_segment, Transform parent)
-        //{
-        //    Segment_MB new_segment;
-        //    do
-        //    {
-        //        new_segment = segments[r.Next(segments.Length)];
-        //    } while (!ComplyRules(new_segment, prev_segment));
-        //    return Instantiate(new_segment, parent);
-        //}
         public Segment_MB SpawnSegment(Segment_MB prev_segment, Transform parent)
         {
             Segment_MB new_segment;
             do
             {
-                new_segment = segments[r.Next(segments.Length)];
-            } while (ComplyRules(new_segment, prev_segment));
+                //new_segment = segments[r.Next(segments.Length)];
+                //CYPRIAN ADD THIS
+
+                if (indexSegment >= segments.Length)
+                    new_segment = exits[0];
+                new_segment = segments[indexSegment];
+                indexSegment++;
+
+            } while (!ComplyRules(new_segment, prev_segment));
             return Instantiate(new_segment, parent);
         }
         public Segment_MB SpawnExit(Segment_MB prev_segment, Transform parent)

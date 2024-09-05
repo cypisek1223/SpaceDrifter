@@ -13,12 +13,9 @@ namespace SpaceDrifter2D
         [SerializeField] Animator portalAnim;
 
 
-        //DO ZMIANY TO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        public GameObject scoreKeeperObject;
+        //TO BE CHANGED
         public GameObject finishCanvas;
-        public ScoreKeeper sc;
-        //[SerializeField] UnityEvent OnOpen;
-        //[SerializeField] UnityEvent OnClose;
+
 
 
         [SerializeField] bool open = true;
@@ -29,9 +26,6 @@ namespace SpaceDrifter2D
             portalAnim.Play("StartingLeveling");
             
             finishCanvas = GameObject.FindGameObjectWithTag("FinishLevelPanel");
-            //scoreKeeperObject = GameObject.FindGameObjectWithTag("ScoreKeeper");
-            //sc = scoreKeeperObject.GetComponent<ScoreKeeper>();
-
             //LevelManager.Instance?.Register(this);
         }
         
@@ -51,7 +45,6 @@ namespace SpaceDrifter2D
         
         private void FinishLevel()
         {
-            Debug.Log("FINISH LEVEL");
             GameManager.FinishLevel();
             //sc.FinishCurrentLevel();
             finishCanvas.SetActive(true);

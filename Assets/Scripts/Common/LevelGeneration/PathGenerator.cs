@@ -11,7 +11,8 @@ namespace SpaceDrifter2D
     public class PathGenerator : MonoBehaviour
     {
         public Segment_MB startSegment;
-        Segment_MB current_segment;
+        public Segment_MB current_segment;
+        
 
         public SegmentLibrary library;
         public Transform parent;
@@ -33,8 +34,12 @@ namespace SpaceDrifter2D
             destroy_queue.Enqueue(startSegment);
             current_segment = startSegment;
 
+            
             library.Init(levelData!=null?levelData.Seed:1);
-            for(int i=0; i<loaded_segment_count-1; i++)
+            //ZMIENIONE
+            //library.Init(library.segments.Length);
+
+            for (int i=0; i<loaded_segment_count-1; i++)
             {
                 PlaceSegment();
             }
@@ -75,8 +80,8 @@ namespace SpaceDrifter2D
 
         public void MovePlayer()
         {
-            playerSegmentPosition++;
-            if(levelData != null && levelData.Length == playerSegmentPosition)
+            playerSegmentPosition++;                                             //CYPRIAN ADD THIS
+            if(levelData != null && levelData.Length == playerSegmentPosition || library.indexSegment >= library.segments.Length)
             {
                 PlaceExit();
                 return;

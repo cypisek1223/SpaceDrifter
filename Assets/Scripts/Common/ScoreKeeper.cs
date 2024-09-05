@@ -17,7 +17,7 @@ namespace SpaceDrifter2D
         [SerializeField] private TextMeshProUGUI coinsText;
         [SerializeField] private TextMeshProUGUI coinsTextEndMenu;
         [SerializeField] private TextMeshProUGUI starText;
-        [SerializeField] private TextMeshProUGUI timeText;
+        [SerializeField] public TextMeshProUGUI timeText;
         [SerializeField] private TextMeshProUGUI timeEndMenuText;
         [SerializeField] private TextMeshProUGUI misionPointsText;
         [SerializeField] private TextMeshProUGUI bonusCoinText;
@@ -43,7 +43,7 @@ namespace SpaceDrifter2D
         public int playerPoints;
         public int totalPoints;
 
-   
+
         //public void Start()
         //{
         //
@@ -146,7 +146,7 @@ namespace SpaceDrifter2D
         {
             while (true)
             {
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(2);
                 time = time.Add(TimeSpan.FromSeconds(1));
                 timeText.text = time.ToString("mm\\:ss");
             }
