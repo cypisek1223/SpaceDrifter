@@ -38,11 +38,12 @@ namespace SpaceDrifter2D
             {
                 PlaceSegment();
             }
+
         }
 
         public void PlaceSegment()
         {
-            Segment_MB new_segment = library.SpawnSegment(current_segment, parent);
+             Segment_MB new_segment = library.SpawnSegment(current_segment, parent);
             new_segment.Previous = current_segment;
             new_segment.SetRotation(current_segment.transform.rotation, current_segment.DirectionChange);
             new_segment.PlaceByEntranceAt(current_segment.Exit);

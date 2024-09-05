@@ -129,18 +129,27 @@ EditorBuildSettings:
     path: "Assets/Scenes/Nowe\u015Awiaty/Story/TheIsland.unity"
     guid: 92723035d1643fd48aa4f03ae4d7f772
   - enabled: 1
+    path: Assets/cSandBox/Scens/TutorialLevel.unity
+    guid: 2ace40e35194b4d45a34e8b7e16f351b
+  - enabled: 1
+    path: Assets/cSandBox/Scens/LevelMenu.unity
+    guid: 149078c06dacc5844a0bff9344d59f3c
+  - enabled: 1
     path: "Assets/Scenes/Nowe\u015Awiaty/Story/Szkolenie/Tunnel.unity"
     guid: d985393eb7618d64c86de7bdf00bc267
   - enabled: 1
-    path: "Assets/Scenes/Nowe\u015Awiaty/Story/Szkolenie/Generation_electric.unity"
+    path: "Assets/Scenes/Nowe\u015Awiaty/Story/Szkolenie/X.unity"
     guid: 191fa22f4d95ebb4ba80cffe74725a59
   - enabled: 1
     path: "Assets/Scenes/Nowe\u015Awiaty/Story/Szkolenie/Generation_PlainStyle.unity"
     guid: a364d7aaf18ae6a41834b2556d6810cf
   - enabled: 1
-    path: Assets/cSandBox/Tutorial Level/Scens/TutorialLevel.unity
-    guid: 2ace40e35194b4d45a34e8b7e16f351b
+    path: "Assets/Scenes/Nowe\u015Awiaty/Story/Szkolenie/Generation_electric.unity"
+    guid: 1bcb960dd70b7324b9878e292060b820
   - enabled: 1
-    path: Assets/cSandBox/Tutorial Level/Scens/LevelMenu.unity
-    guid: 149078c06dacc5844a0bff9344d59f3c
+    path: "Assets/Scenes/Nowe\u015Awiaty/Story/Szkolenie/CGeneratio.unity"
+    guid: 8b7c9bb5a6bd6054296a6ba153951842
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/Story/Szkolenie/WayTowardsSun.unity"
+    guid: 4b33338ff4bf30344abc3a53c5004538
   m_configObjects: {}

@@ -90,8 +90,8 @@ namespace SpaceDrifter2D
             shipInnerGlow.enabled = true;
             engineParticles.gameObject.SetActive(true);
 
-            smokeParticles.SetActive(true);
-            fireParticles.SetActive(true);
+            //smokeParticles.SetActive(true);
+            //fireParticles.SetActive(true);
         }
 
         public void SetInnerGlowColor(Color color)

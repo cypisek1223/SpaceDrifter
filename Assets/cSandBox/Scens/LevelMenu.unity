@@ -10341,7 +10341,7 @@ MonoBehaviour:
   level:
     levelID: 7
     name: Level7
-    scene: Generation_PlainStyle
+    scene: Tunnel
     levelType: 1
     fade: 1
     locked: 0
@@ -10389,7 +10389,7 @@ MonoBehaviour:
   level:
     levelID: 3
     name: Level3
-    scene: Tunnel
+    scene: CGeneratio
     levelType: 1
     fade: 1
     locked: 0
@@ -10540,7 +10540,7 @@ MonoBehaviour:
   level:
     levelID: 5
     name: Level5
-    scene: Generation_PlainStyle
+    scene: WayTowardsSun
     levelType: 1
     fade: 1
     locked: 0

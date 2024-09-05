@@ -12,8 +12,11 @@ namespace SpaceDrifter2D
         public bool Push { get; set; }
         #endregion
 
-        [SerializeField] float maxPower = 0.5f;
-        protected float power;
+        [SerializeField] float maxPower = 0.5f; 
+        [SerializeField] float timeToMaxPower;
+ 
+
+        [SerializeField] protected float power;
         [SerializeField] float fuelUsagePerSecond = 10;
 
         public float availableFuel;
@@ -36,6 +39,13 @@ namespace SpaceDrifter2D
 
             Push = InputHandler.Instance.Thrust > 0;
             AccumulateForce();
+
+            //Debug.Log("Prendkosc:" +rb.velocity + " magnitude:"+ rb.velocity.magnitude);
+           
+            if (power == maxPower)
+            {
+                Debug.Log("MAX POWER");
+            }
         }
 
         private void FixedUpdate()
@@ -48,9 +58,12 @@ namespace SpaceDrifter2D
         #region Adjustable Overidable Force Accumulating methods
         protected virtual void AccumulateForce()
         {
+           
             if (Push)
             {
-                power = maxPower;
+
+                power = Mathf.Lerp(power, maxPower, timeToMaxPower);
+
             }
             else
             {

@@ -23,8 +23,8 @@ namespace SpaceDrifter2D
         [SerializeField] private float jumpMaxPower = 10;
 
         [SerializeField] ParticleSystem spawnEffect;
-        [SerializeField] ParticleSystem smokeEffect;
-        [SerializeField] ParticleSystem fireEffect;
+        [SerializeField] GameObject smokeEffect;
+        [SerializeField] GameObject fireEffect;
 
         [Header("Start Portal")]
         [SerializeField] GameObject startPortal;
@@ -87,6 +87,8 @@ namespace SpaceDrifter2D
         public void PlayerRb()
         {
             playerController.Rb.bodyType = RigidbodyType2D.Dynamic;
+            smokeEffect.SetActive(true);
+            fireEffect.SetActive(true);
         }
         private void SpawnEffect()
         {
@@ -107,8 +109,7 @@ namespace SpaceDrifter2D
                 playerController.Rb.AddForce(playerController.Rb.transform.up * power, ForceMode2D.Impulse);
                 powerImage.enabled = false;
 
-                //smokeEffect.Play();
-                //fireEffect.Play();
+               
             }
         }
 

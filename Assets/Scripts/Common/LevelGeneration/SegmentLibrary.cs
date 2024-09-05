@@ -16,13 +16,22 @@ namespace SpaceDrifter2D
             r = new Random(seed);
         }
 
+        //public Segment_MB SpawnSegment(Segment_MB prev_segment, Transform parent)
+        //{
+        //    Segment_MB new_segment;
+        //    do
+        //    {
+        //        new_segment = segments[r.Next(segments.Length)];
+        //    } while (!ComplyRules(new_segment, prev_segment));
+        //    return Instantiate(new_segment, parent);
+        //}
         public Segment_MB SpawnSegment(Segment_MB prev_segment, Transform parent)
         {
             Segment_MB new_segment;
             do
             {
                 new_segment = segments[r.Next(segments.Length)];
-            } while (!ComplyRules(new_segment, prev_segment));
+            } while (ComplyRules(new_segment, prev_segment));
             return Instantiate(new_segment, parent);
         }
         public Segment_MB SpawnExit(Segment_MB prev_segment, Transform parent)

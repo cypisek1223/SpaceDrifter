@@ -29,8 +29,8 @@ namespace SpaceDrifter2D
             portalAnim.Play("StartingLeveling");
             
             finishCanvas = GameObject.FindGameObjectWithTag("FinishLevelPanel");
-            scoreKeeperObject = GameObject.FindGameObjectWithTag("ScoreKeeper");
-            sc = scoreKeeperObject.GetComponent<ScoreKeeper>();
+            //scoreKeeperObject = GameObject.FindGameObjectWithTag("ScoreKeeper");
+            //sc = scoreKeeperObject.GetComponent<ScoreKeeper>();
 
             //LevelManager.Instance?.Register(this);
         }
@@ -40,10 +40,11 @@ namespace SpaceDrifter2D
             if (collision.CompareTag("Player") && open)
             {
                 Debug.Log("Player IN Portal");
+                ScoreKeeper.Instance.PauseTime();
                 PlayerController pcont = collision.gameObject.GetComponentInParent<PlayerController>();
                 pcont.TurnEnginesOff();
                 LeanTween.move(collision.gameObject, targetPosition.position, 3f).setEase(LeanTweenType.easeOutQuint);
-                //LeanTween.scale(collision.gameObject, Vector3.zero, 1).setEase(LeanTweenType.easeOutQuint).setOnComplete(FinishLevel);
+                //LeanTween.scale(collision.gameObject, Vector3.zero, 1).setEase(LeanTweenType.easeOutQuint).setOnComplete(FinishLevel);          
                 portalAnim.Play("EndingLevels");
             }
         }
@@ -52,7 +53,7 @@ namespace SpaceDrifter2D
         {
             Debug.Log("FINISH LEVEL");
             GameManager.FinishLevel();
-            sc.FinishCurrentLevel();
+            //sc.FinishCurrentLevel();
             finishCanvas.SetActive(true);
         }
         

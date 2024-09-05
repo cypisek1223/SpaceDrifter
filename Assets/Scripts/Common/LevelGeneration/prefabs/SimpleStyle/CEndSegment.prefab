@@ -60,7 +60,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.8433915, w: 0.53729963}
   m_LocalPosition: {x: 10, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9154417800960170175}
@@ -109,6 +109,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {fileID: 8009504818764952723}
   portalAnim: {fileID: 5128707414179630154}
+  scoreKeeperObject: {fileID: 0}
+  finishCanvas: {fileID: 0}
+  sc: {fileID: 0}
   open: 1
 --- !u!58 &9092630711549457510
 CircleCollider2D:
