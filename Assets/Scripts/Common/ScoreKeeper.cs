@@ -103,7 +103,10 @@ namespace SpaceDrifter2D
             coins++;
             coinsText.text = coins.ToString();
         }
-
+        public void BonusCoinCollect()
+        {
+            bonusCoin++;
+        }
         public void Gate()
         {
             //Reduce time or smth...

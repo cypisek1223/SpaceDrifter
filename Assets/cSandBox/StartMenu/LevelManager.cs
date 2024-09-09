@@ -19,6 +19,12 @@ namespace SpaceDrifter2D
             LevelUI.enabled = false;
         }
 
+        public void SelectLevel(LevelData level, PlanetData planetData,Canvas LevelUI)
+        {
+            GameManager.LevelLoad(level, planetData);
+            LevelUI.enabled = false;
+        }
+
         //public Button[] levelButtons;
         //
         //public string levelNamePrefix = "Level_";

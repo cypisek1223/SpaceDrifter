@@ -295,6 +295,7 @@ Transform:
   - {fileID: 2666111939595752183}
   - {fileID: 3122384763526710963}
   - {fileID: 4014615249980230026}
+  - {fileID: 3949131864625149220}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1335544116293170599
@@ -317,7 +318,31 @@ MonoBehaviour:
   directionChange: 0
   onPlayerEnter:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3181216213058376129}
+        m_TargetAssemblyTypeName: SpaceDrifter2D.Movert, Generic
+        m_MethodName: Move
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3152883282293994891}
+        m_TargetAssemblyTypeName: SpaceDrifter2D.Movert, Generic
+        m_MethodName: Move
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!50 &5252607134002720329
 Rigidbody2D:
   serializedVersion: 4
@@ -1367,7 +1392,7 @@ Transform:
   m_GameObject: {fileID: 8792758310062894397}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33, y: 0, z: 0}
+  m_LocalPosition: {x: 15, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1603,6 +1628,102 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7561504669873810689, guid: 10d1c258917221a4b8215ab3fc3b60b7, type: 3}
   m_PrefabInstance: {fileID: 2159922527189283590}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4130273370328207170
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6419037584633900210}
+    m_Modifications:
+    - target: {fileID: 1125775931227732582, guid: 247eea70ff856d04c9dc2fc886d24203, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1125775931227732582, guid: 247eea70ff856d04c9dc2fc886d24203, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1125775931227732582, guid: 247eea70ff856d04c9dc2fc886d24203, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -23.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1125775931227732582, guid: 247eea70ff856d04c9dc2fc886d24203, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1125775931227732582, guid: 247eea70ff856d04c9dc2fc886d24203, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1125775931227732582, guid: 247eea70ff856d04c9dc2fc886d24203, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9889639
+      objectReference: {fileID: 0}
+    - target: {fileID: 1125775931227732582, guid: 247eea70ff856d04c9dc2fc886d24203, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1125775931227732582, guid: 247eea70ff856d04c9dc2fc886d24203, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1125775931227732582, guid: 247eea70ff856d04c9dc2fc886d24203, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.14815682
+      objectReference: {fileID: 0}
+    - target: {fileID: 1125775931227732582, guid: 247eea70ff856d04c9dc2fc886d24203, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1125775931227732582, guid: 247eea70ff856d04c9dc2fc886d24203, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1125775931227732582, guid: 247eea70ff856d04c9dc2fc886d24203, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 17.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946582215840140821, guid: 247eea70ff856d04c9dc2fc886d24203, type: 3}
+      propertyPath: m_Name
+      value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946582215840140821, guid: 247eea70ff856d04c9dc2fc886d24203, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 247eea70ff856d04c9dc2fc886d24203, type: 3}
+--- !u!114 &3152883282293994891 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1337823199941737161, guid: 247eea70ff856d04c9dc2fc886d24203, type: 3}
+  m_PrefabInstance: {fileID: 4130273370328207170}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87d5d15459f49c94494f0e3977750378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3181216213058376129 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1545964979438870147, guid: 247eea70ff856d04c9dc2fc886d24203, type: 3}
+  m_PrefabInstance: {fileID: 4130273370328207170}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87d5d15459f49c94494f0e3977750378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &3949131864625149220 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1125775931227732582, guid: 247eea70ff856d04c9dc2fc886d24203, type: 3}
+  m_PrefabInstance: {fileID: 4130273370328207170}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5480936554044162038
 PrefabInstance:

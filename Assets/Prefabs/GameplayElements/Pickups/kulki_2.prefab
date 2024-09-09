@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2977567580125862473}
   - component: {fileID: 5445211506958759316}
   - component: {fileID: 6734886925709061283}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: kulki_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
