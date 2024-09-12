@@ -34,6 +34,8 @@ namespace SpaceDrifter2D
         {
             transform.position = position;
             transform.position -= entrance.rotation * entrance.localPosition;
+           
+            //Debug.Log("Pozycja to: " + transform.position +" entren position "+ entrance.localPosition +" position :"+ position);
         }
 
         public void SetRotation(Quaternion prev_rot, DirectionChange directionChange)

@@ -68,3 +68,9 @@ TagManager:
   - name: Foreground
     uniqueID: 3256912493
     locked: 0
+  - name: Level
+    uniqueID: 2765355145
+    locked: 0
+  - name: Menu
+    uniqueID: 3315756699
+    locked: 0
