@@ -66,7 +66,7 @@ public class ChangButtonColor : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Screen point is out of bounds: " + screenPoint);
+            //Debug.LogWarning("Screen point is out of bounds: " + screenPoint);
         }
     }
 

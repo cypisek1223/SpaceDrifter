@@ -2274,26 +2274,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7918941416864770519, guid: b73950978b8df1245be73efe2952b636, type: 3}
-      propertyPath: m_Intensity
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918941416864770519, guid: b73950978b8df1245be73efe2952b636, type: 3}
-      propertyPath: m_ShadowIntensity
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918941416864770519, guid: b73950978b8df1245be73efe2952b636, type: 3}
-      propertyPath: m_PointLightInnerRadius
-      value: 9.153688
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918941416864770519, guid: b73950978b8df1245be73efe2952b636, type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 19.890928
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918941416864770519, guid: b73950978b8df1245be73efe2952b636, type: 3}
-      propertyPath: m_ShadowIntensityEnabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

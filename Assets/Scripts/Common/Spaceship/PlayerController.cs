@@ -18,6 +18,7 @@ namespace SpaceDrifter2D
         [SerializeField] private EnginesParticleController engineParticles;
         [SerializeField] private GameObject smokeParticles;
         [SerializeField] private GameObject fireParticles;
+        [SerializeField] private GameObject speedingParticles;
 
 
         [SerializeField] DamageSystem damageSys;
@@ -73,6 +74,7 @@ namespace SpaceDrifter2D
             engineParticles.gameObject.SetActive(false);
             smokeParticles.SetActive(false);
             fireParticles.SetActive(false);
+            speedingParticles.SetActive(false);
         }
         public void Hide()
         {
@@ -82,6 +84,7 @@ namespace SpaceDrifter2D
 
             smokeParticles.SetActive(false);
             fireParticles.SetActive(false);
+            speedingParticles.SetActive(false);
         }
         public void Show()
         {
@@ -92,6 +95,7 @@ namespace SpaceDrifter2D
 
             //smokeParticles.SetActive(true);
             //fireParticles.SetActive(true);
+            //speedingParticles.SetActive(false);
         }
 
         public void SetInnerGlowColor(Color color)
