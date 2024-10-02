@@ -16,9 +16,9 @@ namespace SpaceDrifter2D
         [SerializeField] private SpriteRenderer ship;
         [SerializeField] private SpriteRenderer shipInnerGlow;
         [SerializeField] private EnginesParticleController engineParticles;
-        [SerializeField] private GameObject smokeParticles;
-        [SerializeField] private GameObject fireParticles;
-        [SerializeField] private GameObject speedingParticles;
+        [SerializeField] public GameObject smokeParticles;
+        [SerializeField] public GameObject fireParticles;
+        [SerializeField] public GameObject speedingParticles;
 
 
         [SerializeField] DamageSystem damageSys;

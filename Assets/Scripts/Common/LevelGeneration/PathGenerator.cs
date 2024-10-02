@@ -58,7 +58,8 @@ namespace SpaceDrifter2D
             destroy_queue.Enqueue(current_segment);
             if(destroy_queue.Count > loaded_segment_count)
             {
-                Destroy(destroy_queue.Dequeue().gameObject);
+                //CYPRIAN COMMENT IT
+                //Destroy(destroy_queue.Dequeue().gameObject);
             }
         }
 
@@ -74,7 +75,8 @@ namespace SpaceDrifter2D
             destroy_queue.Enqueue(current_segment);
             if (destroy_queue.Count > loaded_segment_count)
             {
-                Destroy(destroy_queue.Dequeue().gameObject);
+                //CYPRIAN COMMENT IT
+                //Destroy(destroy_queue.Dequeue().gameObject);
             }
         }
 

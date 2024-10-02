@@ -1,85 +1,82 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeadingArea : MonoBehaviour
+namespace SpaceDrifter2D
 {
-
-    private Vector2 originalVelocity;
-    private Rigidbody2D playerRb;
-    private Coroutine restoreSpeedCoroutine;
-
-    [SerializeField] float speedMultiplier = 1.2f;
-    [SerializeField] float boostDuration = 2f;
-    [SerializeField] float decetionRadius = 0.5f;
-    [SerializeField] LayerMask boostSpeed;
-
-    private void OnAreBoost()
+    public class SpeedingArea : MonoBehaviour
     {
-        Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position, decetionRadius, boostSpeed);
+        private Vector2 originalVelocity;
+        private Coroutine restoreSpeedCoroutine;
+        private bool boosting = false;
 
-        if (collider != null)
+        [SerializeField] Rigidbody2D playerRb;
+        [SerializeField] PlayerController playerController;
+
+        [SerializeField] float speedMultiplier = 1.2f;
+        [SerializeField] float boostDuration = 2f;
+        [SerializeField] float detectionRadius = 0.5f;
+        [SerializeField] LayerMask boostSpeed;
+
+        private void Update()
         {
-            if (restoreSpeedCoroutine != null)
-            {
-                StopCoroutine(restoreSpeedCoroutine);
-                restoreSpeedCoroutine = null;
-            }
-
-            originalVelocity = playerRb.velocity;
-
-            playerRb.velocity *= speedMultiplier;
-        }
-        else
-        {
-            restoreSpeedCoroutine = StartCoroutine(nameof(RestoreSpeedAfterDelay));
+            OnAreaBoost();
         }
 
-
-    }
-
-    private IEnumerable RestoreSpeedAfterDelay()
-    {
-        Debug.Log("END speeding");
-        yield return new WaitForSeconds(boostDuration);
-
-        playerRb.velocity = originalVelocity;
-
-        restoreSpeedCoroutine = null;
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+        private void OnAreaBoost()
         {
-            Debug.Log("START speeding");
-            playerRb = collision.GetComponent<Rigidbody2D>();
+            // Sprawdza, czy gracz jest w obszarze przyspieszenia
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius, boostSpeed);
 
-            if(playerRb != null)
+            if (colliders.Length > 0)
             {
-                
-                if(restoreSpeedCoroutine != null)
+                // Jeœli gracz jest w obszarze przyspieszenia
+                boosting = true;
+
+                if (restoreSpeedCoroutine != null)
                 {
                     StopCoroutine(restoreSpeedCoroutine);
                     restoreSpeedCoroutine = null;
                 }
 
+                playerController.smokeParticles.SetActive(false);
+                playerController.fireParticles.SetActive(false);
+                playerController.speedingParticles.SetActive(true);
+
                 originalVelocity = playerRb.velocity;
 
-                playerRb.velocity *= speedMultiplier;
+                playerRb.velocity *= speedMultiplier;  // Zwiêksz prêdkoœæ gracza
+                Debug.Log("BOOST");
+            }
+            else
+            {
+                // Jeœli gracz opuœci³ obszar przyspieszenia i nadal by³ boostowany
+                if (boosting && restoreSpeedCoroutine == null)
+                {
+                    restoreSpeedCoroutine = StartCoroutine(RestoreSpeedAfterDelay());
+                }
             }
         }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+
+        private IEnumerator RestoreSpeedAfterDelay()
         {
-            Debug.Log("EXIT");
-            restoreSpeedCoroutine = StartCoroutine(nameof(RestoreSpeedAfterDelay));
+            Debug.Log("END speeding");
+            boosting = false;
+
+            // Czekaj okreœlony czas przed przywróceniem prêdkoœci
+            yield return new WaitForSeconds(boostDuration);
+
+            // Wy³¹cz cz¹steczki przyspieszenia, w³¹cz inne efekty
+            playerController.smokeParticles.SetActive(true);
+            playerController.fireParticles.SetActive(true);
+            playerController.speedingParticles.SetActive(false);  // Wy³¹cz efekty przyspieszenia
+
+            // Przywróæ oryginaln¹ prêdkoœæ gracza
+            playerRb.velocity = originalVelocity;
+
+            Debug.Log("Speed restored.");
+            restoreSpeedCoroutine = null;  // Zresetuj korutynê
         }
     }
-
-  
-
 }
