@@ -242,6 +242,7 @@ GameObject:
   - component: {fileID: 96316261}
   - component: {fileID: 96316260}
   - component: {fileID: 96316263}
+  - component: {fileID: 96316264}
   m_Layer: 5
   m_Name: LevelMenu
   m_TagString: Untagged
@@ -346,6 +347,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelStatsList: []
+--- !u!114 &96316264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96316258}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b8078523523ec47b5d769cddad0ffe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetStatistics: 0
 --- !u!1 &160843458
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,7 +2193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &960948611
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3869,7 +3883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1685822636
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6565,7 +6579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &2596548504969197655
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7163,7 +7177,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 2203709442004707366}
   m_OnClick:
     m_PersistentCalls:
@@ -8973,7 +8987,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 4214247653495216761}
   m_OnClick:
     m_PersistentCalls:
@@ -9684,7 +9698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &6911003444485592462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10325,7 +10339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7818265046880619991
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10995,7 +11009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &8398114035333534341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11079,7 +11093,7 @@ MonoBehaviour:
   level:
     levelID: 7
     name: Level7
-    scene: Tunnel
+    scene: Color2Generation
     levelType: 1
     fade: 1
     locked: 0
@@ -11658,7 +11672,7 @@ MonoBehaviour:
   level:
     levelID: 6
     name: Level6
-    scene: TutorialLevel
+    scene: ColorGeneration
     levelType: 1
     fade: 1
     locked: 0

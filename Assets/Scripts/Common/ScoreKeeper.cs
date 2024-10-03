@@ -331,8 +331,4 @@ namespace SpaceDrifter2D
         public float bestTime;
         public int stars;
     }
-
-   
-
-
 }

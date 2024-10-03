@@ -46,8 +46,14 @@ namespace SpaceDrifter2D
 
                 originalVelocity = playerRb.velocity;
 
-                playerRb.velocity *= speedMultiplier;  // Zwiêksz prêdkoœæ gracza
+                // Oblicz kierunek na podstawie obrotu statku
+                Vector2 direction = playerRb.transform.up; // "up" wskazuje kierunek, w którym patrzy statek
+
+                // Zwiêksz prêdkoœæ tylko w kierunku obrotu
+                playerRb.velocity = direction * (originalVelocity.magnitude * speedMultiplier);
+
                 Debug.Log("BOOST");
+                //Handheld.Vibrate();
             }
             else
             {

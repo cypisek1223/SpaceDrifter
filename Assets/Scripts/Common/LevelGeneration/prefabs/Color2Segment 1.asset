@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d421eac10fccde46af4314542de4dbe, type: 3}
+  m_Name: Color2Segment 1
+  m_EditorClassIdentifier: 
+  segments:
+  - {fileID: 1335544116293170599, guid: 94605eb146ee9c64b911c001e8b3198d, type: 3}
+  - {fileID: 5938089018511096130, guid: 8958e8fbe050f0f4f99f04538de837ae, type: 3}
+  - {fileID: 2786780257078595660, guid: 188b3590b735c8243aea908644748ff1, type: 3}
+  - {fileID: 5938089018511096130, guid: 8958e8fbe050f0f4f99f04538de837ae, type: 3}
+  - {fileID: 2786780257078595660, guid: 188b3590b735c8243aea908644748ff1, type: 3}
+  - {fileID: 3029402446635679231, guid: 5d1e3f60b38640e479980934af9c2cf2, type: 3}
+  - {fileID: 5938089018511096130, guid: 82b34ef044160da42a58f61d02963dd9, type: 3}
+  - {fileID: 1335544116293170599, guid: 94605eb146ee9c64b911c001e8b3198d, type: 3}
+  exits:
+  - {fileID: 8178023766435672655, guid: 4dffe3f7767bae7449cdee17b6c5819f, type: 3}
+  rules:
+  - {fileID: 11400000, guid: e93a22267051a0445b58266f3350fdff, type: 2}
+  indexSegment: 3
