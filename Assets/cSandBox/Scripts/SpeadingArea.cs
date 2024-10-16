@@ -8,8 +8,9 @@ namespace SpaceDrifter2D
     public class SpeedingArea : MonoBehaviour
     {
         private Vector2 originalVelocity;
-        private Coroutine restoreSpeedCoroutine;
+        [SerializeField] Vector2 boostVelocity;
         private bool boosting = false;
+        private Coroutine speedDecayCoroutine;
 
         [SerializeField] Rigidbody2D playerRb;
         [SerializeField] PlayerController playerController;
@@ -17,7 +18,12 @@ namespace SpaceDrifter2D
         [SerializeField] float speedMultiplier = 1.2f;
         [SerializeField] float boostDuration = 2f;
         [SerializeField] float detectionRadius = 0.5f;
+
+        [SerializeField] float speedChangeRate = 0.5f; 
         [SerializeField] LayerMask boostSpeed;
+
+        private float boostTimer = 0f;
+        private Vector2 targetVelocity;
 
         private void Update()
         {
@@ -26,63 +32,53 @@ namespace SpaceDrifter2D
 
         private void OnAreaBoost()
         {
-            // Sprawdza, czy gracz jest w obszarze przyspieszenia
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius, boostSpeed);
 
             if (colliders.Length > 0)
             {
-                // Jeœli gracz jest w obszarze przyspieszenia
-                boosting = true;
-
-                if (restoreSpeedCoroutine != null)
+                if (!boosting)
                 {
-                    StopCoroutine(restoreSpeedCoroutine);
-                    restoreSpeedCoroutine = null;
+                    boosting = true;
+                    if (speedDecayCoroutine != null)
+                    {
+                        StopCoroutine(speedDecayCoroutine);
+                        speedDecayCoroutine = null;
+                    }
+
+                    playerController.smokeParticles.SetActive(false);
+                    playerController.fireParticles.SetActive(false);
+                    playerController.speedingParticles.SetActive(true);
+
+                    originalVelocity = playerRb.velocity;
+
+                    Vector2 direction = playerRb.transform.up;
+                    targetVelocity = direction * (originalVelocity.magnitude * speedMultiplier);  
                 }
 
-                playerController.smokeParticles.SetActive(false);
-                playerController.fireParticles.SetActive(false);
-                playerController.speedingParticles.SetActive(true);
 
-                originalVelocity = playerRb.velocity;
+                playerRb.velocity = Vector2.Lerp(playerRb.velocity, targetVelocity, speedChangeRate * Time.deltaTime);
 
-                // Oblicz kierunek na podstawie obrotu statku
-                Vector2 direction = playerRb.transform.up; // "up" wskazuje kierunek, w którym patrzy statek
-
-                // Zwiêksz prêdkoœæ tylko w kierunku obrotu
-                playerRb.velocity = direction * (originalVelocity.magnitude * speedMultiplier);
-
-                Debug.Log("BOOST");
-                //Handheld.Vibrate();
             }
             else
             {
-                // Jeœli gracz opuœci³ obszar przyspieszenia i nadal by³ boostowany
-                if (boosting && restoreSpeedCoroutine == null)
+                if (boosting && speedDecayCoroutine == null)
                 {
-                    restoreSpeedCoroutine = StartCoroutine(RestoreSpeedAfterDelay());
+                    speedDecayCoroutine = StartCoroutine(GradualSpeedDecay());
                 }
             }
         }
 
-        private IEnumerator RestoreSpeedAfterDelay()
-        {
-            Debug.Log("END speeding");
-            boosting = false;
-
-            // Czekaj okreœlony czas przed przywróceniem prêdkoœci
+        private IEnumerator GradualSpeedDecay()
+        {          
             yield return new WaitForSeconds(boostDuration);
 
-            // Wy³¹cz cz¹steczki przyspieszenia, w³¹cz inne efekty
+            boosting = false;
+
             playerController.smokeParticles.SetActive(true);
             playerController.fireParticles.SetActive(true);
-            playerController.speedingParticles.SetActive(false);  // Wy³¹cz efekty przyspieszenia
+            playerController.speedingParticles.SetActive(false);
 
-            // Przywróæ oryginaln¹ prêdkoœæ gracza
-            playerRb.velocity = originalVelocity;
-
-            Debug.Log("Speed restored.");
-            restoreSpeedCoroutine = null;  // Zresetuj korutynê
+            yield return null;
         }
     }
 }

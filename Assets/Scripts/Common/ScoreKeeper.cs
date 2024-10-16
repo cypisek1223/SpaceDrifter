@@ -41,7 +41,8 @@ namespace SpaceDrifter2D
 
 
         public int playerPoints;
-        public int totalPoints;
+        [SerializeField] private int points;
+        [SerializeField] int totalPoints;
 
 
         //public void Start()
@@ -287,6 +288,7 @@ namespace SpaceDrifter2D
         {
             starText.text = "0";
             coinsText.text = "0";
+            points = 0;
 
             yield return StartCoroutine(PointsAnimationTwo(0, coins, coinsTextEndMenu));
             yield return new WaitForSeconds(0.01f);
@@ -298,7 +300,8 @@ namespace SpaceDrifter2D
             yield return StartCoroutine(PointsAnimationTwo(0, bonusCoin, bonusCoinText));
             yield return new WaitForSeconds(0.01f);
             yield return new WaitForSeconds(0.01f);
-            yield return StartCoroutine(PointsAnimationTwo(0, totalPoints, summaryPointsText));
+            yield return StartCoroutine(PointsAnimationTwo(0, points, summaryPointsText));
+            totalPoints += points;
         }
         private IEnumerator PointsAnimationTwo( int currentValue, int targetValue, TextMeshProUGUI uiText)
         {
@@ -313,7 +316,7 @@ namespace SpaceDrifter2D
             }
             currentValue = targetValue;
 
-            totalPoints += currentValue;
+            points += currentValue;
 
             uiText.text = currentValue.ToString("0");
         }

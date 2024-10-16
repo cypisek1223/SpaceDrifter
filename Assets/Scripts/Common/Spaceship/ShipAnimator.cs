@@ -15,16 +15,14 @@ namespace SpaceDrifter2D
             animator.SetFloat("dmg", 0);
         }
 
-        private void Update()
-        {
-            
-        }
-
         public void AnimateDamage(float dmg, bool cirt)
         {
-            dmgTimer = 0;
-            animator.SetFloat("dmg", dmg);
-            Invoke(nameof(StopDamage), 5.5f);
+            //dmgTimer = 0;
+            
+                animator.SetFloat("dmg", dmg);
+                //Invoke(nameof(StopDamage), 5.5f);
+                Invoke(nameof(StopDamage), 5f);
+           
         }
 
         void StopDamage()
