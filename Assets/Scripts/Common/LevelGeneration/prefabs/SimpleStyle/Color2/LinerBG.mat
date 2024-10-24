@@ -32,9 +32,11 @@ Material:
     - _Direction: 0
     - _EnableLighting: 0
     - _GradientScale: 22.7
-    - _GradientWidth: 11.03
+    - _GradientWidth: 9.49
+    - _LineThickness: 1.3
     - _LineWidth: 1
     - _ObjectLength: 8.22
+    - _ObjectThickness: 1.1
     - _ObjectWidth: 1
     - _Thickness: 0.1
     m_Colors:

@@ -21,6 +21,7 @@ namespace SpaceDrifter2D
         [SerializeField] public GameObject speedingParticles;
 
 
+
         [SerializeField] DamageSystem damageSys;
 
         private Engine[] engines;
@@ -72,9 +73,11 @@ namespace SpaceDrifter2D
         public void TurnEnginesOff()
         {
             engineParticles.gameObject.SetActive(false);
-            smokeParticles.SetActive(false);
-            fireParticles.SetActive(false);
-            speedingParticles.SetActive(false);
+
+
+            //smokeParticles.SetActive(false);
+            //fireParticles.SetActive(false);
+            //speedingParticles.SetActive(false);
         }
         public void Hide()
         {
@@ -82,19 +85,19 @@ namespace SpaceDrifter2D
             shipInnerGlow.enabled = false;
             engineParticles.gameObject.SetActive(false);
 
+
             smokeParticles.SetActive(false);
             fireParticles.SetActive(false);
-            speedingParticles.SetActive(false);
+            //speedingParticles.SetActive(false);
         }
         public void Show()
         {
-            Debug.Log("SHOW");
             ship.enabled = true;
             shipInnerGlow.enabled = true;
             engineParticles.gameObject.SetActive(true);
 
-            //smokeParticles.SetActive(true);
-            //fireParticles.SetActive(true);
+            smokeParticles.SetActive(true);
+            fireParticles.SetActive(true);
             //speedingParticles.SetActive(false);
         }
 

@@ -8,7 +8,7 @@ namespace SpaceDrifter2D
     public class SpeedingArea : MonoBehaviour
     {
         private Vector2 originalVelocity;
-        [SerializeField] Vector2 boostVelocity;
+        private Vector2 boostVelocity;
         private bool boosting = false;
         private Coroutine speedDecayCoroutine;
 
@@ -25,11 +25,24 @@ namespace SpaceDrifter2D
         private float boostTimer = 0f;
         private Vector2 targetVelocity;
 
+        [SerializeField] public Animator PartilesController;
+
         private void Update()
         {
             OnAreaBoost();
         }
 
+        private void SpeedEffect()
+        {
+            if(playerRb.velocity.magnitude >= 100)
+            {
+                PartilesController.Play("SpeedParticlesOn");
+            }
+            else
+            {
+                PartilesController.Play("StartParticlesOn");
+            }
+        }
         private void OnAreaBoost()
         {
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius, boostSpeed);
@@ -45,9 +58,11 @@ namespace SpaceDrifter2D
                         speedDecayCoroutine = null;
                     }
 
-                    playerController.smokeParticles.SetActive(false);
-                    playerController.fireParticles.SetActive(false);
-                    playerController.speedingParticles.SetActive(true);
+                    //playerController.smokeParticles.SetActive(false);
+                    //playerController.fireParticles.SetActive(false);
+                    //playerController.speedingParticles.SetActive(true);
+
+                    PartilesController.Play("SpeedParticlesOn");
 
                     originalVelocity = playerRb.velocity;
 
@@ -74,9 +89,11 @@ namespace SpaceDrifter2D
 
             boosting = false;
 
-            playerController.smokeParticles.SetActive(true);
-            playerController.fireParticles.SetActive(true);
-            playerController.speedingParticles.SetActive(false);
+            //playerController.smokeParticles.SetActive(true);
+            //playerController.fireParticles.SetActive(true);
+            //playerController.speedingParticles.SetActive(false);
+
+            PartilesController.Play("StartParticlesOn");
 
             yield return null;
         }

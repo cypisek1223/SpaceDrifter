@@ -75,7 +75,6 @@ namespace SpaceDrifter2D
         #region Mechanics Methods
         public void Thrust()
         {
-            Debug.LogError("THRUST");
              availableFuel = tank ? tank.UseFuel(fuelUsagePerSecond * Time.deltaTime * power / MaxPower) : fuelUsagePerSecond * Time.deltaTime * power / MaxPower;
 
             if (availableFuel > 0)

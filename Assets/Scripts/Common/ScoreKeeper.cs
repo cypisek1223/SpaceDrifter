@@ -268,21 +268,6 @@ namespace SpaceDrifter2D
             
         }
 
-        //private IEnumerator PointsAnimation()
-        //{
-        //    float elapsedTime = 0f;
-        //
-        //    while(elapsedTime < animationDuration)
-        //    {
-        //        elapsedTime += Time.deltaTime;
-        //        currentPoint = (int)Mathf.Lerp(0, targetPoints, elapsedTime / animationDuration);
-        //        coinsTextEndMenu.text = currentPoint.ToString("0");
-        //        yield return null;
-        //    }
-        //    currentPoint = targetPoints;
-        //    coinsTextEndMenu.text = currentPoint.ToString("0");
-        //}
-
         
         private IEnumerator AnimationPointsSequence()
         {

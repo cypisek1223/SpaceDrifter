@@ -24,32 +24,5 @@ namespace SpaceDrifter2D
             GameManager.LevelLoad(level, planetData);
             LevelUI.enabled = false;
         }
-
-        //public Button[] levelButtons;
-        //
-        //public string levelNamePrefix = "Level_";
-
-        //private void Start()
-        //{
-        //    for (int i = 0; i < levelButtons.Length; i++)
-        //    {
-        //        int levelIndex = i + 1;
-        //        levelButtons[i].onClick.AddListener(() => LoadLevel(levelIndex));
-        //    }
-        //}
-        //
-        //private void LoadLevel(int levelIndex)
-        //{
-        //    string levelName = levelNamePrefix + levelIndex.ToString();
-        //
-        //    if (Application.CanStreamedLevelBeLoaded(levelName))
-        //    {
-        //        SceneManager.LoadScene(levelName);
-        //    }
-        //    else
-        //    {
-        //        Debug.LogError("Poziom" + levelName + " nie istnieje");
-        //    }
-        //}
     }
 }

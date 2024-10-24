@@ -23,7 +23,7 @@ namespace SpaceDrifter2D
         private void UpdateStarDisplay()
         {
             int stars = scoreKeeper.GetStars(levelId);
-            
+
             for (int i = 0; i < starImages.Length; i++)
             {
                 //NIE CZAJE TEGO

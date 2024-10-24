@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class StartMenu : MonoBehaviour
 {
-    public Animator SlideMenu;
 
     private string sceneKey;
     private void Start()
@@ -21,7 +20,7 @@ public class StartMenu : MonoBehaviour
         }
         else
         {
-            SlideMenu.Play("MenuRight");
+            Debug.Log("LevelMenu");
         }
     }
 
@@ -36,7 +35,6 @@ public class StartMenu : MonoBehaviour
     }
     public void Levels()
     {
-        SlideMenu.Play("SlideMenuLeft");
     }
     public void Settings()
     {
@@ -56,8 +54,5 @@ public class StartMenu : MonoBehaviour
               PlayerPrefs.Save();
       #endif
     }
-    public void Return()
-    {
-        SlideMenu.Play("SlideMenuRight");
-    }
+
 }
