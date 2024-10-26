@@ -33,9 +33,10 @@ public class SwipeController : MonoBehaviour
         }
         else
         {
-            currentPage = 2;
-            targetPos += pageStep;
-            levelPagesRect.LeanMoveLocal(targetPos, 0.1f).setEase(tweenType);
+            //Debug.Log("Drugie odpalenie");
+            //currentPage = 2;
+            //targetPos += pageStep;
+            //levelPagesRect.LeanMoveLocal(targetPos, 0.01f).setEase(tweenType);
 
         }
     }

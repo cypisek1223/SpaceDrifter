@@ -10,18 +10,18 @@ public class StartMenu : MonoBehaviour
     private string sceneKey;
     private void Start()
     {
-        sceneKey = $"{SceneManager.GetActiveScene().name}_FirstTime";
-
-        if (PlayerPrefs.GetInt(sceneKey, 0) == 0)
-        {
-           
-            PlayerPrefs.SetInt(sceneKey, 1);
-            PlayerPrefs.Save();
-        }
-        else
-        {
-            Debug.Log("LevelMenu");
-        }
+        //sceneKey = $"{SceneManager.GetActiveScene().name}_FirstTime";
+        //
+        //if (PlayerPrefs.GetInt(sceneKey, 0) == 0)
+        //{
+        //   
+        //    PlayerPrefs.SetInt(sceneKey, 1);
+        //    PlayerPrefs.Save();
+        //}
+        //else
+        //{
+        //    Debug.Log("LevelMenu");
+        //}
     }
 
     private void OnApplicationQuit()

@@ -53,9 +53,7 @@ namespace SpaceDrifter2D
                 //Destroy(hitCollider.gameObject);
                 //hitCollider.gameObject.active = false;
 
-                //var particle = PoolParticleManager.Instance.GetInstance(this.GetType());
-                //particle.transform.position = transform.position;
-                //particle.Play();
+               
 
                 if(hitCollider.tag == "BonusCoin")
                 {
@@ -71,6 +69,10 @@ namespace SpaceDrifter2D
                 coinCollectedAnim.Play("coinCollected");
                 
                 Destroy(hitCollider.gameObject);
+
+                var particle = PoolParticleManager.Instance.GetInstance(this.GetType());
+                particle.transform.position = transform.position;
+                particle.Play();
             }
         }       
         private void OnDrawGizmos()
