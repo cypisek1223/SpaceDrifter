@@ -6,7 +6,7 @@ namespace SpaceDrifter2D
 {
     internal class CameraOrthoSizer : MonoBehaviour
     {
-        [SerializeField] Vector2 minMaxOrhtoSize = new Vector2( 7, 19 );
+        [SerializeField] Vector2 minMaxOrhtoSize = new( 7, 19 );
 
         //https://www.youtube.com/watch?v=KPoeNZZ6H4s
         private float prevSpeedInput;

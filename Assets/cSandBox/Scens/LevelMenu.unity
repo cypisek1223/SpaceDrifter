@@ -587,8 +587,8 @@ GameObject:
   - component: {fileID: 96316260}
   - component: {fileID: 96316263}
   - component: {fileID: 96316264}
-  - component: {fileID: 96316266}
   - component: {fileID: 96316265}
+  - component: {fileID: 96316266}
   m_Layer: 5
   m_Name: LevelMenu
   m_TagString: Untagged
@@ -861,7 +861,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96316258}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c48ba78181e5c814da301ede643ea5ab, type: 3}
   m_Name: 

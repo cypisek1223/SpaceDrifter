@@ -91,10 +91,11 @@ namespace SpaceDrifter2D
         //CYPRIAN ADDED THIS
         public static void LevelLoad(LevelData level, PlanetData planet)
         {
-            //Instance.dataManager.InMenu = false;            
+            //Instance.dataManager.InMenu = false;
+            LevelLoader.LoadLevel(level);
             SetCurrentPlanet(planet);
             Instance.dataManager.CurrentPlanet.SetCurrentLevel(level);
-            LevelLoader.LoadLevel(level);
+           
         }
         //END
         public static void NextLevel()

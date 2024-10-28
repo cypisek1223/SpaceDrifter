@@ -21,8 +21,7 @@ namespace SpaceDrifter2D
          [SerializeField] private PlanetData[] planets;
          [SerializeField] public Canvas LevelUI;
 
-        //[SerializeField] GameObject dedicationLevel;
-        //[SerializeField] GameObject[] visitedLevels;
+
          private void Start()
          {
              // Przypisz ka¿demu przyciskowi odpowiedni¹ funkcjê z poziomem
@@ -35,13 +34,14 @@ namespace SpaceDrifter2D
             string sceneKey = $"{SceneManager.GetActiveScene().name}_FirstTime";
             if (PlayerPrefs.GetInt(sceneKey, 0) == 0)
             {
-                for (int i = 4; i < levelButtons.Length; i++)
-                {
-                    int index = i;
-                    levelButtons[i].button.interactable = false;
-                    levelButtons[i].stars.SetActive(false);
-                    levelButtons[i].padlock.SetActive(true);
-                }
+                //DO ODKOMENTOWANIA 
+                //for (int i = 4; i < levelButtons.Length; i++)
+                //{
+                //    int index = i;
+                //    levelButtons[i].button.interactable = false;
+                //    levelButtons[i].stars.SetActive(false);
+                //    levelButtons[i].padlock.SetActive(true);
+                //}
 
             }
         }

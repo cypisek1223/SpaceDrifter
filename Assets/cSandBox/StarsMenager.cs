@@ -5,6 +5,7 @@ namespace SpaceDrifter2D
 {
     public class StarsMenager : MonoBehaviour
     {
+
         [System.Serializable]
         public class LevelStars
         {
@@ -12,7 +13,7 @@ namespace SpaceDrifter2D
             public Image star2;
             public Image star3;
 
-            public void UpdateStarsDisplay(int level, int stars)
+            public void DowlandStarts(int level, int stars)
             {
                 star1.enabled = stars >= 1;
                 star2.enabled = stars >= 2;
@@ -25,6 +26,7 @@ namespace SpaceDrifter2D
         [SerializeField] private LevelStars[] levelStars;
         [SerializeField] private ScoreKeeper scoreKeeper;
 
+        [SerializeField] GameData gameDate;
         private void Start()
         {
             scoreKeeper = FindObjectOfType<ScoreKeeper>();
@@ -38,10 +40,8 @@ namespace SpaceDrifter2D
 
         private void UpdateStarDisplay(int levelIndex)
         {
-            int stars = scoreKeeper.GetStars(levelIndex);
-            levelStars[levelIndex].UpdateStarsDisplay(levelIndex, stars);
-
-
+            int stars = gameDate.levels[levelIndex].starts;
+            levelStars[levelIndex].DowlandStarts(levelIndex, stars);
         }
     }
 }

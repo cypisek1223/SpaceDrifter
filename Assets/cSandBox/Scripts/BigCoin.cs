@@ -6,9 +6,9 @@ public class BigCoin : MonoBehaviour
 {
 
     [SerializeField] GameObject otherCoins;
-
+    [SerializeField] Vector3 coinsPosition;
     private void OnDestroy()
     {
-        Instantiate(otherCoins, transform.position, Quaternion.identity);
+        GameObject coins = Instantiate(otherCoins, transform.position + coinsPosition, Quaternion.identity);
     }
 }

@@ -1,8 +1,10 @@
 using System;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace SpaceDrifter2D
 {
@@ -25,7 +27,7 @@ namespace SpaceDrifter2D
         [SerializeField] private TextMeshProUGUI summaryPointsText;
         [SerializeField] private int currentSummaryPoints;
 
-
+       
         [Header("Level Database")]
         private LevelData level;
 
@@ -38,6 +40,7 @@ namespace SpaceDrifter2D
         private int misionPoint;
         private int prevTime;
         private int prevCoins;
+        
 
 
         public int playerPoints;
@@ -306,6 +309,7 @@ namespace SpaceDrifter2D
             uiText.text = currentValue.ToString("0");
         }
         #endregion
+        
     }
 
 
@@ -319,4 +323,27 @@ namespace SpaceDrifter2D
         public float bestTime;
         public int stars;
     }
+
+    [System.Serializable]
+    public class LevelDate2
+    {
+        public int levelId;
+        public bool blocked;
+        public int starts;
+        public float theBestTime;
+        public float bestTime;
+        public float mediumTime;
+        public float lowTime;
+
+        public Image[] stars;
+        public Button button;
+    }
+
+    [System.Serializable]
+    [CreateAssetMenu(fileName = "DataLevel", menuName = "GameManagement/DataLevel")]
+    public class GameData : ScriptableObject
+    {
+        public List<LevelDate2> levels;
+    }
+
 }
