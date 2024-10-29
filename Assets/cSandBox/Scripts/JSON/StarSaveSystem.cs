@@ -8,20 +8,20 @@ namespace SpaceDrifter2D
     {
         #region Stars System
 
-        [SerializeField] GameData gameDate;
+        [SerializeField] DataLevel gameDate;
         [SerializeField]  List<LevelDate2> previewBoard;
         [SerializeField] int levelStars;
         private void Start()
         {
-            for (int i=0;i< gameDate.levels.Count; i++)
+            for (int i=0;i< gameDate.levels.Length; i++)
             {
-                previewBoard[i].levelId = gameDate.levels[i].levelId;
+                //previewBoard[i].levelId = gameDate.levels[i].levelId;
                 previewBoard[i].blocked = gameDate.levels[i].blocked;
                 previewBoard[i].starts = gameDate.levels[i].starts;
-                previewBoard[i].theBestTime = gameDate.levels[i].theBestTime;
+                previewBoard[i].theBestTimeForStars = gameDate.levels[i].theBestTimeForStars;
                 previewBoard[i].bestTime = gameDate.levels[i].bestTime;
-                previewBoard[i].mediumTime = gameDate.levels[i].mediumTime;
-                previewBoard[i].lowTime = gameDate.levels[i].lowTime;
+                previewBoard[i].mediumTimeForStars = gameDate.levels[i].mediumTimeForStars;
+                previewBoard[i].lowTimeForStars = gameDate.levels[i].lowTimeForStars;
             }
         }
 
@@ -48,17 +48,17 @@ namespace SpaceDrifter2D
             }
 
         }
-        private int CalculateStars(GameData _gameDate, int levelId, float completionTime)
+        private int CalculateStars(DataLevel _gameDate, int levelId, float completionTime)
         {
             if (completionTime < _gameDate.levels[levelId].bestTime)
             {
                 return 3;
             }
-            else if (completionTime <= _gameDate.levels[levelId].mediumTime)
+            else if (completionTime <= _gameDate.levels[levelId].mediumTimeForStars)
             {
                 return 2;
             }
-            else if(completionTime <= _gameDate.levels[levelId].lowTime)
+            else if(completionTime <= _gameDate.levels[levelId].lowTimeForStars)
             {
                 return 1;
             }
@@ -69,7 +69,7 @@ namespace SpaceDrifter2D
 
         }
 
-        public int GetStars(int levelId, GameData gameDate)
+        public int GetStars(int levelId, DataLevel gameDate)
         {
             return gameDate.levels[levelId].starts; ;
             

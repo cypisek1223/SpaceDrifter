@@ -9,7 +9,7 @@ namespace SpaceDrifter2D
     {
         private Vector2 originalVelocity;
         private Vector2 boostVelocity;
-        private bool boosting = false;
+        public bool boosting = false;
         private Coroutine speedDecayCoroutine;
 
         [SerializeField] Rigidbody2D playerRb;

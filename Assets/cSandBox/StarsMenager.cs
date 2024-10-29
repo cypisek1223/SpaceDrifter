@@ -26,7 +26,7 @@ namespace SpaceDrifter2D
         [SerializeField] private LevelStars[] levelStars;
         [SerializeField] private ScoreKeeper scoreKeeper;
 
-        [SerializeField] GameData gameDate;
+        [SerializeField] DataLevel gameDate;
         private void Start()
         {
             scoreKeeper = FindObjectOfType<ScoreKeeper>();

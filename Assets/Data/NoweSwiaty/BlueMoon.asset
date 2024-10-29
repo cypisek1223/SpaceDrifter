@@ -20,63 +20,88 @@ MonoBehaviour:
   themeLightColor: {r: 0.51023495, g: 0.7212933, b: 0.735849, a: 1}
   themeDarkColor: {r: 0.25832146, g: 0.3860152, b: 0.4056604, a: 1}
   levelList:
-  - name: The Island
+  - levelID: 0
+    name: The Island
     scene: TheIsland
     levelType: 1
     fade: 1
     locked: 0
     seed: 1
     length: 10
-  - name: Blue World
+  - levelID: 0
+    name: Blue World
     scene: BlueWavyWorld
     levelType: 1
     fade: 1
     locked: 0
     seed: 1
     length: 10
-  - name: Black and White
+  - levelID: 0
+    name: Black and White
     scene: BWWorld_Textured
     levelType: 1
     fade: 1
     locked: 0
     seed: 1
     length: 10
-  - name: Black and White greened
+  - levelID: 0
+    name: Black and White greened
     scene: BWWorld_NoTextures
     levelType: 1
     fade: 1
     locked: 0
     seed: 1
     length: 10
-  - name: Cave Entrance
+  - levelID: 0
+    name: Cave Entrance
     scene: BWWorld_Textured Longer
     levelType: 1
     fade: 1
     locked: 0
     seed: 1
     length: 10
-  - name: Green Misty Valley
+  - levelID: 0
+    name: Green Misty Valley
     scene: Green Misty Valley
     levelType: 1
     fade: 1
     locked: 0
     seed: 1
     length: 10
-  - name: LevelGeneration
+  - levelID: 0
+    name: LevelGeneration
     scene: Initialisation
     levelType: 2
     fade: 1
     locked: 0
     seed: 1
     length: 10
-  - name: 4
+  - levelID: 0
+    name: 4
     scene: MoonSurfacex
     levelType: 1
     fade: 1
     locked: 0
     seed: 1
     length: 10
-  - name: Naruto
+  - levelID: 0
+    name: Naruto
+    scene: NaurotForestScene
+    levelType: 1
+    fade: 1
+    locked: 0
+    seed: 1
+    length: 10
+  - levelID: 0
+    name: Naruto
+    scene: NaurotForestScene
+    levelType: 1
+    fade: 1
+    locked: 0
+    seed: 1
+    length: 10
+  - levelID: 0
+    name: Naruto
     scene: NaurotForestScene
     levelType: 1
     fade: 1

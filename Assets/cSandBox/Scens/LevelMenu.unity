@@ -242,7 +242,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24608558}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -585,10 +585,7 @@ GameObject:
   - component: {fileID: 96316262}
   - component: {fileID: 96316261}
   - component: {fileID: 96316260}
-  - component: {fileID: 96316263}
-  - component: {fileID: 96316264}
-  - component: {fileID: 96316265}
-  - component: {fileID: 96316266}
+  - component: {fileID: 96316267}
   m_Layer: 5
   m_Name: LevelMenu
   m_TagString: Untagged
@@ -680,7 +677,7 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &96316263
+--- !u!114 &96316267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -689,35 +686,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 96316258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2614b6de925811749abe0a730e6a00c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 77f4bfc0f54e76b478d1613257bc6155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelStatsList: []
---- !u!114 &96316264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96316258}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1b8078523523ec47b5d769cddad0ffe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resetStatistics: 0
---- !u!114 &96316265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96316258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b3013d4a32f7aa42a58d6ee79001642, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  planets: {fileID: 11400000, guid: 5453bd5b3d5eddc4ca77d6a97a140bc7, type: 2}
+  LevelUI: {fileID: 96316262}
   levelButtons:
   - button: {fileID: 2137304703}
     stars: {fileID: 945540360}
@@ -752,132 +725,6 @@ MonoBehaviour:
   - button: {fileID: 324124125406951097}
     stars: {fileID: 5776333536465320888}
     padlock: {fileID: 4885513245988704203}
-  levels:
-  - levelID: 0
-    name: Level0
-    scene: LevelMenu
-    levelType: 1
-    fade: 0
-    locked: 1
-    seed: 0
-    length: 0
-  - levelID: 1
-    name: Level1
-    scene: CGeneration_PlainStyle
-    levelType: 1
-    fade: 1
-    locked: 0
-    seed: 1
-    length: 1
-  - levelID: 2
-    name: Level2
-    scene: CGeneration_PlainStyle
-    levelType: 2
-    fade: 1
-    locked: 0
-    seed: 1
-    length: 10
-  - levelID: 3
-    name: Level3
-    scene: CGeneration_PlainStyle2
-    levelType: 2
-    fade: 1
-    locked: 0
-    seed: 1
-    length: 10
-  - levelID: 4
-    name: Level4
-    scene: CObsGeneration_PlainStyle2 1
-    levelType: 2
-    fade: 1
-    locked: 0
-    seed: 1
-    length: 10
-  - levelID: 5
-    name: Level5
-    scene: CObsGeneration_PlainStyle2 1
-    levelType: 2
-    fade: 1
-    locked: 0
-    seed: 1
-    length: 10
-  - levelID: 6
-    name: Level6
-    scene: Color1Generation
-    levelType: 2
-    fade: 1
-    locked: 0
-    seed: 1
-    length: 10
-  - levelID: 7
-    name: Level7
-    scene: Color2Generation
-    levelType: 2
-    fade: 1
-    locked: 0
-    seed: 1
-    length: 10
-  - levelID: 8
-    name: Level8
-    scene: Color3Generation
-    levelType: 2
-    fade: 1
-    locked: 0
-    seed: 1
-    length: 10
-  - levelID: 9
-    name: Level9
-    scene: Color3Generation
-    levelType: 2
-    fade: 1
-    locked: 0
-    seed: 1
-    length: 10
-  - levelID: 10
-    name: Level10
-    scene: Color3Generation
-    levelType: 2
-    fade: 1
-    locked: 0
-    seed: 1
-    length: 10
-  planets:
-  - {fileID: 11400000, guid: a046d5d3dbfba58408b5f91a94e457f8, type: 2}
-  - {fileID: 11400000, guid: a046d5d3dbfba58408b5f91a94e457f8, type: 2}
-  - {fileID: 11400000, guid: a046d5d3dbfba58408b5f91a94e457f8, type: 2}
-  - {fileID: 11400000, guid: a046d5d3dbfba58408b5f91a94e457f8, type: 2}
-  - {fileID: 11400000, guid: a046d5d3dbfba58408b5f91a94e457f8, type: 2}
-  - {fileID: 11400000, guid: a046d5d3dbfba58408b5f91a94e457f8, type: 2}
-  - {fileID: 11400000, guid: a046d5d3dbfba58408b5f91a94e457f8, type: 2}
-  - {fileID: 11400000, guid: a046d5d3dbfba58408b5f91a94e457f8, type: 2}
-  - {fileID: 11400000, guid: a046d5d3dbfba58408b5f91a94e457f8, type: 2}
-  - {fileID: 11400000, guid: a046d5d3dbfba58408b5f91a94e457f8, type: 2}
-  - {fileID: 11400000, guid: a046d5d3dbfba58408b5f91a94e457f8, type: 2}
-  LevelUI: {fileID: 96316262}
---- !u!114 &96316266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96316258}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c48ba78181e5c814da301ede643ea5ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelButtons:
-  - {fileID: 2137304703}
-  - {fileID: 3733436287263980260}
-  - {fileID: 2086971407872273085}
-  - {fileID: 3766113683213799835}
-  - {fileID: 6645349621382678134}
-  - {fileID: 8571713525065902733}
-  - {fileID: 5756124798128784238}
-  - {fileID: 3372648799278878071}
-  - {fileID: 8077665948793447230}
-  - {fileID: 2016354725693695366}
-  - {fileID: 324124125406951097}
   levelStars:
   - star1: {fileID: 1567870838}
     star2: {fileID: 703679870}
@@ -913,6 +760,7 @@ MonoBehaviour:
     star2: {fileID: 3084666317292728088}
     star3: {fileID: 5232468119367509628}
   scoreKeeper: {fileID: 0}
+  gameDate: {fileID: 11400000, guid: 1265e65f8b6a0c948a8a6d5366ac3d8b, type: 2}
 --- !u!1 &109607541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,7 +880,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114726698}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1998,7 +1846,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: '
+
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 34232effb545af640bc5bb0eb62b5aeb, type: 2}
   m_sharedMaterial: {fileID: -7472687217148228796, guid: 34232effb545af640bc5bb0eb62b5aeb, type: 2}
@@ -2259,9 +2110,9 @@ RectTransform:
   - {fileID: 1976379967}
   m_Father: {fileID: 393987733}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 503.60413, y: -284.60938}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &499345760
@@ -2751,9 +2602,9 @@ RectTransform:
   - {fileID: 512104285}
   m_Father: {fileID: 393987733}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 503.60413, y: -185.76562}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &602300339
@@ -3045,7 +2896,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 703679868}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -3752,9 +3603,9 @@ RectTransform:
   - {fileID: 1072045354}
   m_Father: {fileID: 393987733}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 503.60413, y: -86.921875}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &963189269
@@ -5589,7 +5440,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487505829}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -6013,7 +5864,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567870836}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -6078,9 +5929,9 @@ RectTransform:
   - {fileID: 1390031746}
   m_Father: {fileID: 393987733}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 503.60413, y: -383.45312}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1596739117
@@ -6596,7 +6447,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735662077}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -6896,7 +6747,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794391062}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -7496,7 +7347,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929659033}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -8006,7 +7857,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073077089}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 

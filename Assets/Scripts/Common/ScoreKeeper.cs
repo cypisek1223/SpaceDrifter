@@ -10,7 +10,6 @@ namespace SpaceDrifter2D
 {
     public class ScoreKeeper : Singleton<ScoreKeeper>
     {
- 
         [Header("Points Animation")]
         [SerializeField] private float animationDuration = 1.5f;
 
@@ -47,11 +46,10 @@ namespace SpaceDrifter2D
         [SerializeField] private int points;
         [SerializeField] int totalPoints;
 
-
-        //public void Start()
-        //{
-        //
-        //}
+        [Header("GAME DATE")]
+        public DataLevel dataLevel;
+        [SerializeField] List<LevelDate2> previewBoard;
+    
         public void HideAll()
         {
             levelStats.gameObject.SetActive(false);
@@ -177,77 +175,80 @@ namespace SpaceDrifter2D
 
         //Cyprian ADDED THIS STAR SYSTEM 
 
-        #region Stars System
-
-        [SerializeField]
-        public List<LevelDataTime> levels;
-
-        //CZEGO AWAKE NIE DZIALA
-        private void Start()
+        #region Unlock Levels
+        void UnlockLevel(int countUnlock)
         {
-            LoadAllLevelData();
-        }
-
-        private void LoadAllLevelData()
-        {
-            foreach (LevelDataTime level in levels)
+            for(int i=0; i <= countUnlock; i++)
             {
-                level.stars = PlayerPrefs.GetInt($"Level_{level.levelId}__Stars", 0);
+                dataLevel.levels[i].blocked = true;
             }
         }
+
+        #endregion
+        #region Stars System
+
+        private void Start()
+        {
+            for (int i = 0; i < dataLevel.levels.Length; i++)
+            {
+                //previewBoard[i].levelId = dataLevel.levels[i].levelId;
+                previewBoard[i].blocked = dataLevel.levels[i].blocked;
+                previewBoard[i].starts = dataLevel.levels[i].starts;
+                previewBoard[i].theBestTimeForStars = dataLevel.levels[i].theBestTimeForStars;
+                previewBoard[i].bestTime = dataLevel.levels[i].bestTime;
+                previewBoard[i].mediumTimeForStars = dataLevel.levels[i].mediumTimeForStars;
+                previewBoard[i].lowTimeForStars = dataLevel.levels[i].lowTimeForStars;
+            }
+        }
+
 
         public void SaveLevelCompletionTime(int levelId, float completionTime)
         {
 
-            //OGARNIJ JAK TO DZIALA
-            LevelDataTime level = levels.Find(l => l.levelId == levelId);
+
+            var level = dataLevel.levels[levelId];
             if (level != null)
             {
                 Debug.Log("Zapisywanie Levela");
-                levelStars = CalculateStars(completionTime, level);
+                levelStars = CalculateStars(dataLevel, levelId, completionTime);
 
 
-                if (levelStars > PlayerPrefs.GetInt($"Level_{levelId}_Stars", 0))
+                if (levelStars > dataLevel.levels[levelId].starts)
                 {
-                    level.stars = levelStars;
-                }
-                else
-                {
-                    level.stars = GetStars(levelId);
+                    dataLevel.levels[levelId].starts = levelStars;
                 }
 
-                PlayerPrefs.SetInt($"Level_{levelId}_Stars", level.stars);
-                PlayerPrefs.SetFloat($"Level_{levelId}_CompletionTime", completionTime);
+                if (dataLevel.levels[levelId].bestTime < completionTime)
+                    dataLevel.levels[levelId].bestTime = completionTime;
 
-                if (level.bestTime < completionTime)
-                    level.bestTime = completionTime;
-                PlayerPrefs.SetFloat($"Level_{levelId}_TheBestTime", level.bestTime);
-
-                PlayerPrefs.Save();
             }
 
         }
-
-        private int CalculateStars(float completionTime, LevelDataTime level)
+        private int CalculateStars(DataLevel _dataLevel, int levelId, float completionTime)
         {
-            if (completionTime < level.mediumTime)
+            if (completionTime < _dataLevel.levels[levelId].bestTime)
             {
                 return 3;
             }
-            else if (completionTime <= level.lowTime)
+            else if (completionTime <= _dataLevel.levels[levelId].mediumTimeForStars)
             {
                 return 2;
             }
-            else
-            {             
+            else if (completionTime <= _dataLevel.levels[levelId].lowTimeForStars)
+            {
                 return 1;
+            }
+            else
+            {
+                return 0;
             }
 
         }
 
-        public int GetStars(int levelId)
+        public int GetStars(int levelId, DataLevel dataLevel)
         {
-            return PlayerPrefs.GetInt($"Level_{levelId}_Stars", 0);
+            return dataLevel.levels[levelId].starts; ;
+
         }
 
         #endregion
@@ -280,7 +281,7 @@ namespace SpaceDrifter2D
 
             yield return StartCoroutine(PointsAnimationTwo(0, coins, coinsTextEndMenu));
             yield return new WaitForSeconds(0.01f);
-            yield return StartCoroutine(PointsAnimationTwo(0, GetStars(id), starText));
+            yield return StartCoroutine(PointsAnimationTwo(0, GetStars(id, dataLevel), starText));
             yield return new WaitForSeconds(0.01f);
             //yield return StartCoroutine(PointsAnimationTwo(0, time, timeEndMenuText));
             yield return StartCoroutine(PointsAnimationTwo(0, misionPoint, misionPointsText));
@@ -311,39 +312,23 @@ namespace SpaceDrifter2D
         #endregion
         
     }
-
-
-
-    [System.Serializable]
-    public class LevelDataTime
-    {
-        public int levelId;
-        public float mediumTime;
-        public float lowTime;
-        public float bestTime;
-        public int stars;
-    }
-
     [System.Serializable]
     public class LevelDate2
     {
         public int levelId;
         public bool blocked;
         public int starts;
-        public float theBestTime;
+        
         public float bestTime;
-        public float mediumTime;
-        public float lowTime;
+        public float theBestTimeForStars;
+        public float mediumTimeForStars;
+        public float lowTimeForStars;
 
-        public Image[] stars;
-        public Button button;
+        //public Image[] stars;
+        //public Button button;
+        public LevelData level;
     }
 
-    [System.Serializable]
-    [CreateAssetMenu(fileName = "DataLevel", menuName = "GameManagement/DataLevel")]
-    public class GameData : ScriptableObject
-    {
-        public List<LevelDate2> levels;
-    }
 
+      
 }

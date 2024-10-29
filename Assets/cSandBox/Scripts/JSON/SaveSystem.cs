@@ -9,26 +9,33 @@ namespace SpaceDrifter2D
 
         // Œcie¿ka do pliku z danymi
         private string filePath;
+        [SerializeField] DataLevel gameData;
         private void Awake()
         {
             filePath = Application.persistentDataPath + "/gameData.json";
+            SaveGameData(gameData);
+            //LoadGameData();
+        }
+        private void OnApplicationQuit()
+        {
+            SaveGameData(gameData);
         }
 
         // Zapis danych do JSON
-        public void SaveGameData(GameData gameData)
+        public void SaveGameData(DataLevel _gameData)
         {
-            string json = JsonUtility.ToJson(gameData);
+            string json = JsonUtility.ToJson(_gameData);
             File.WriteAllText(filePath, json);
             Debug.Log("Game data saved to " + filePath);
         }
 
         // Odczyt danych z JSON
-        public GameData LoadGameData()
+        public DataLevel LoadGameData()
         {
             if (File.Exists(filePath))
             {
                 string json = File.ReadAllText(filePath);
-                GameData gameData = JsonUtility.FromJson<GameData>(json);
+                DataLevel gameData = JsonUtility.FromJson<DataLevel>(json);
                 return gameData;
             }
             else

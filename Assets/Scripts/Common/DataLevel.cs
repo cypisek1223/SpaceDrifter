@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SpaceDrifter2D;
 
 namespace SpaceDrifter2D
 {
-    [System.Serializable]
     [CreateAssetMenu(fileName = "DataLevel", menuName = "GameManagement/DataLevel")]
-    public class GameData: ScriptableObject
+    public class DataLevel : ScriptableObject
     {
-        public List<LevelDate2> levels;
+        public LevelDate2[] levels;
     }
 }

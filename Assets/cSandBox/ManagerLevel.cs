@@ -18,9 +18,9 @@ namespace SpaceDrifter2D
 
         [SerializeField] private LevelButtons[] levelButtons;
         [SerializeField] private LevelData[] levels;     
-         [SerializeField] private PlanetData[] planets;
+         [SerializeField] private PlanetData planets;
          [SerializeField] public Canvas LevelUI;
-
+        
 
          private void Start()
          {
@@ -28,20 +28,13 @@ namespace SpaceDrifter2D
              for (int i = 0; i < levelButtons.Length; i++)
              {
                  int index = i; 
-                levelButtons[i].button.onClick.AddListener(() => OnLevelSelected(levels[index], planets[index]));
+                levelButtons[i].button.onClick.AddListener(() => OnLevelSelected(levels[index], planets));
              }
             
             string sceneKey = $"{SceneManager.GetActiveScene().name}_FirstTime";
             if (PlayerPrefs.GetInt(sceneKey, 0) == 0)
             {
-                //DO ODKOMENTOWANIA 
-                //for (int i = 4; i < levelButtons.Length; i++)
-                //{
-                //    int index = i;
-                //    levelButtons[i].button.interactable = false;
-                //    levelButtons[i].stars.SetActive(false);
-                //    levelButtons[i].padlock.SetActive(true);
-                //}
+               
 
             }
         }
