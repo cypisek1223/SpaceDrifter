@@ -94,7 +94,7 @@ MonoBehaviour:
       seed: 1
       length: 10
   - levelId: 5
-    blocked: 1
+    blocked: 0
     starts: 0
     bestTime: 0
     theBestTimeForStars: 30
@@ -103,7 +103,7 @@ MonoBehaviour:
     level:
       levelID: 5
       name: Level5
-      scene: Initialisation
+      scene: Color4Generation
       levelType: 1
       fade: 1
       locked: 1

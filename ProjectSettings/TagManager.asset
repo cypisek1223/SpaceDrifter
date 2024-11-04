@@ -78,3 +78,6 @@ TagManager:
   - name: Menu
     uniqueID: 3315756699
     locked: 0
+  - name: Frames
+    uniqueID: 4228606709
+    locked: 0

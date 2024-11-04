@@ -48,7 +48,7 @@ namespace SpaceDrifter2D
         {
             if (rb.velocity.magnitude > 1.2f && speedingArea.boosting == false)
             {
-                Debug.Log("Zwalanianie status");
+                //Debug.Log("Zwalanianie status");
                 Vector2 slowdown = Vector2.down * slowdownForce;
                 rb.AddForce(slowdown, ForceMode2D.Force);
                 //rb.velocity = rb.velocity * slowdownFactor;
