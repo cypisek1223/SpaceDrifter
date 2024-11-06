@@ -31,8 +31,8 @@ MonoBehaviour:
       length: 10
   - levelId: 1
     blocked: 0
-    starts: 0
-    bestTime: 17
+    starts: 2
+    bestTime: 19
     theBestTimeForStars: 30
     mediumTimeForStars: 40
     lowTimeForStars: 60
@@ -110,7 +110,7 @@ MonoBehaviour:
       seed: 1
       length: 10
   - levelId: 6
-    blocked: 1
+    blocked: 0
     starts: 0
     bestTime: 0
     theBestTimeForStars: 30
@@ -119,7 +119,7 @@ MonoBehaviour:
     level:
       levelID: 6
       name: Level6
-      scene: Initialisation
+      scene: Color5Generation
       levelType: 1
       fade: 1
       locked: 1
@@ -189,3 +189,4 @@ MonoBehaviour:
       locked: 1
       seed: 1
       length: 10
+  predictetLevel: 1

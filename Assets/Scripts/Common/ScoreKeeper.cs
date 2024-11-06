@@ -209,7 +209,6 @@ namespace SpaceDrifter2D
             var level = dataLevel.levels[levelId];
             if (level != null)
             {
-                Debug.Log("Zapisywanie Levela");
                 levelStars = CalculateStars(dataLevel, levelId, completionTime);
 
 

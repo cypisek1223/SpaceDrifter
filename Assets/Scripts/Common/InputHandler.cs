@@ -28,6 +28,9 @@ namespace SpaceDrifter2D
         protected float thrust;
         protected float leftRight;
 
+        //CYPRIAN ADDED THIS 
+        [SerializeField] PlayerController playerController;
+        [SerializeField]  bool fisrtTime = true;
         protected virtual void Start()
         {
             thrustButton.OnDoublePress += TurboOn;
@@ -43,6 +46,17 @@ namespace SpaceDrifter2D
         private void TurboOn()
         {
             if (cooldown) return;
+
+            if (fisrtTime || playerController.renewParticles)
+            {
+                Debug.Log("SMOKE ON");
+                playerController.partilesController.enabled = true;
+                playerController.smokeParticles.SetActive(true);
+                playerController.fireParticles.SetActive(true);
+
+                playerController.renewParticles = false;
+                fisrtTime = false;
+            }
 
             turbo = true;
             TurboThrustActivated?.Invoke();
@@ -75,6 +89,19 @@ namespace SpaceDrifter2D
            // UpdateMouseDown(); //Consider this if is needed
             UpdateUpwards();
             UpdateLeftRight();
+
+            if (isSlowingDown && thrust <=0)
+            {
+                ApplySlowdown();
+            }
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                isSlowingDown = true;
+            }
+            if (Input.GetKeyUp(KeyCode.X))
+            {
+                isSlowingDown = false;
+            }
         }
 
 //External methods
@@ -103,6 +130,16 @@ namespace SpaceDrifter2D
             if (Input.GetKey(KeyCode.Space))
             {
                 thrust = 1;
+               if (fisrtTime||playerController.renewParticles)
+               {
+                    Debug.Log("SMOKE ON");
+                    playerController.partilesController.enabled = true;
+                    playerController.smokeParticles.SetActive(true);
+                    playerController.fireParticles.SetActive(true);
+
+                    playerController.renewParticles = false;
+                    fisrtTime = false;
+               }
             }
             else
             {
@@ -119,6 +156,10 @@ namespace SpaceDrifter2D
             }
 #endif  
         }
+        //public void Smoke()
+        //{
+        //    fisrtTime = true;
+        //}
         protected virtual void UpdateMouseDown()
         {
 #if UNITY_EDITOR
@@ -149,6 +190,38 @@ namespace SpaceDrifter2D
             leftRight = (leftButton.IsHeld ? -1 : 0) + (rightButton.IsHeld ? 1 : 0);
 #endif
         }
+
+
+
+
+
+        #region Slow Down
+        public Rigidbody2D rb;           
+        public float slowdownForce = 5f; 
+        public float slowdownFactor = 0.5f;
+        public bool isSlowingDown = false;
+
+        //IT WILL BE CHANGING
+        public SpeedingArea speedingArea;
+        public void StartSlowdown()
+        {
+            isSlowingDown = true;
+        }
+        public void StopSlowdown()
+        {
+            isSlowingDown = false;
+        }
+
+        private void ApplySlowdown()
+        {
+            if (rb.velocity.magnitude > 1.2f && speedingArea.boosting == false)
+            {
+                Vector2 slowdown = Vector2.down * slowdownForce;
+                rb.AddForce(slowdown, ForceMode2D.Force);
+                //rb.velocity = rb.velocity * slowdownFactor;
+            }
+        }
+        #endregion
     }
 
 }

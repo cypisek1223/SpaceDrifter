@@ -16,10 +16,17 @@ namespace SpaceDrifter2D
         [SerializeField] private SpriteRenderer ship;
         [SerializeField] private SpriteRenderer shipInnerGlow;
         [SerializeField] private EnginesParticleController engineParticles;
+
+
+        [SerializeField] public Animator partilesController;
         [SerializeField] public GameObject smokeParticles;
         [SerializeField] public GameObject fireParticles;
         [SerializeField] public GameObject speedingParticles;
+        [SerializeField] public GameObject speedEffect;
 
+
+        //Cyprian Added this 
+        public bool renewParticles = false;
 
 
         [SerializeField] DamageSystem damageSys;
@@ -35,6 +42,11 @@ namespace SpaceDrifter2D
 
             InputHandler.TurboThrustActivated += IncreaseEnginesPower;
             InputHandler.TurboThrustDeactivated += ReduceEnginesPower;
+
+            //CYPRIAN ADDED THIS 
+
+            smokeParticles.SetActive(false);
+            fireParticles.SetActive(false);
         }
 
         private void OnDestroy()
@@ -62,6 +74,11 @@ namespace SpaceDrifter2D
         {
             Pause();
             Hide();
+            partilesController.enabled = false;
+            smokeParticles.SetActive(false);
+            fireParticles.SetActive(false);
+            //speedingParticles.SetActive(false);
+            renewParticles = true;
         }
         public void Respawn(StartSpot exit, float health)
         {
@@ -69,15 +86,26 @@ namespace SpaceDrifter2D
             SetStartPosition(exit.startPos, exit.startRot);
           //  Unpause();
             Show();
+            
+            
+            partilesController.enabled = false;
+            smokeParticles.SetActive(false);
+            fireParticles.SetActive(false);
+            speedEffect.SetActive(true);
+            //speedingParticles.SetActive(false);
+            renewParticles = true;
         }
         public void TurnEnginesOff()
         {
             engineParticles.gameObject.SetActive(false);
 
 
-            //smokeParticles.SetActive(false);
-            //fireParticles.SetActive(false);
-            //speedingParticles.SetActive(false);
+            Debug.Log("Zatrzymanie dzialania Animacji");
+            partilesController.enabled = false;
+            smokeParticles.SetActive(false);
+            fireParticles.SetActive(false);
+            speedingParticles.SetActive(false);
+            speedEffect.SetActive(false);
         }
         public void Hide()
         {
@@ -86,18 +114,19 @@ namespace SpaceDrifter2D
             engineParticles.gameObject.SetActive(false);
 
 
+            
             smokeParticles.SetActive(false);
             fireParticles.SetActive(false);
-            //speedingParticles.SetActive(false);
         }
+       
         public void Show()
         {
             ship.enabled = true;
             shipInnerGlow.enabled = true;
             engineParticles.gameObject.SetActive(true);
 
-            smokeParticles.SetActive(true);
-            fireParticles.SetActive(true);
+
+            
             //speedingParticles.SetActive(false);
         }
 

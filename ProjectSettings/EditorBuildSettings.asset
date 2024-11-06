@@ -171,4 +171,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/Nowe\u015Awiaty/Story/Szkolenie/ReadyLevel/CyprianLevel/Color4Generation.unity"
     guid: c4b874ba6b4cf334dbe0798b44ddf629
+  - enabled: 1
+    path: "Assets/Scenes/Nowe\u015Awiaty/Story/Szkolenie/ReadyLevel/CyprianLevel/Color5Generation.unity"
+    guid: f1f4755fa4275b747829e6217fa29b75
   m_configObjects: {}

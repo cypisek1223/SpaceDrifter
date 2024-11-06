@@ -70,6 +70,7 @@ namespace SpaceDrifter2D
             LeanTween.alpha(powerImage.rectTransform, 0.5f, 0.1f).setRepeat(7).setEase(LeanTweenType.easeInOutBounce);
             LeanTween.scale(powerImage.gameObject, Vector3.one * 1.1f, 0.1f).setRepeat(7).setEase(LeanTweenType.pingPong);
             playerController.Rb.transform.localScale = Vector3.zero;
+
             Portal();
             Invoke(nameof(PlayerRb), 1.15f);
 
@@ -86,8 +87,8 @@ namespace SpaceDrifter2D
         public void PlayerRb()
         {
             playerController.Rb.bodyType = RigidbodyType2D.Dynamic;
-            smokeEffect.SetActive(true);
-            fireEffect.SetActive(true);
+            //smokeEffect.SetActive(true);
+            //fireEffect.SetActive(true);
         }
         public void CountdownStarts()
         {

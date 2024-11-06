@@ -25,7 +25,7 @@ namespace SpaceDrifter2D
         private float boostTimer = 0f;
         private Vector2 targetVelocity;
 
-        [SerializeField] public Animator PartilesController;
+        [SerializeField] public Animator partilesController;
 
         private void Update()
         {
@@ -36,11 +36,11 @@ namespace SpaceDrifter2D
         {
             if(playerRb.velocity.magnitude >= 100)
             {
-                PartilesController.Play("SpeedParticlesOn");
+                partilesController.Play("SpeedParticlesOn");
             }
             else
             {
-                PartilesController.Play("StartParticlesOn");
+                partilesController.Play("StartParticlesOn");
             }
         }
         private void OnAreaBoost()
@@ -62,7 +62,7 @@ namespace SpaceDrifter2D
                     //playerController.fireParticles.SetActive(false);
                     //playerController.speedingParticles.SetActive(true);
 
-                    PartilesController.Play("SpeedParticlesOn");
+                    partilesController.Play("SpeedParticlesOn");
 
                     originalVelocity = playerRb.velocity;
 
@@ -89,11 +89,7 @@ namespace SpaceDrifter2D
 
             boosting = false;
 
-            //playerController.smokeParticles.SetActive(true);
-            //playerController.fireParticles.SetActive(true);
-            //playerController.speedingParticles.SetActive(false);
-
-            PartilesController.Play("StartParticlesOn");
+            partilesController.Play("StartParticlesOn");
 
             yield return null;
         }

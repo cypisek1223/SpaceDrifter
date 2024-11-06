@@ -9,5 +9,6 @@ namespace SpaceDrifter2D
     public class DataLevel : ScriptableObject
     {
         public LevelDate2[] levels;
+        public int predictetLevel;
     }
 }
