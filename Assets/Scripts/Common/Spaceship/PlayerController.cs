@@ -73,11 +73,6 @@ namespace SpaceDrifter2D
         {
             Pause();
             Hide();
-            partilesController.enabled = false;
-            smokeParticles.SetActive(false);
-            fireParticles.SetActive(false);
-            //speedingParticles.SetActive(false);
-            renewParticles = true;
         }
         public void Respawn(StartSpot exit, float health)
         {
@@ -117,6 +112,10 @@ namespace SpaceDrifter2D
             
             smokeParticles.SetActive(false);
             fireParticles.SetActive(false);
+            
+            //TO MOZE BYC B£¥D
+            //fireParticles.SetActive(false);
+            //speedingParticles.SetActive(false);
         }
        
         public void Show()

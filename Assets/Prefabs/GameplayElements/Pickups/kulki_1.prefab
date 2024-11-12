@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1052267858044709009}
   - component: {fileID: 5268323312913415337}
   - component: {fileID: 4100382251890995288}
+  - component: {fileID: 1154381124517057872}
   m_Layer: 13
   m_Name: kulki_1
   m_TagString: Untagged
@@ -171,3 +172,17 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1154381124517057872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8568097973089266226}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b32a125a4aace4f8eb64372fe43ccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destinationPoint: {fileID: 0}
+  speed: 5

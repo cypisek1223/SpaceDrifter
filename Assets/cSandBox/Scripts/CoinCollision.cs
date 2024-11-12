@@ -62,6 +62,8 @@ namespace SpaceDrifter2D
                 else
                 {
                     ScoreKeeper.Instance.CoinCollect();
+                    StartCoroutine(MoveCoinToTarget());
+
                 }
                 
                
@@ -70,11 +72,38 @@ namespace SpaceDrifter2D
                 
                 Destroy(hitCollider.gameObject);
 
-                var particle = PoolParticleManager.Instance.GetInstance(this.GetType());
-                particle.transform.position = transform.position;
-                particle.Play();
+                //var particle = PoolParticleManager.Instance.GetInstance(this.GetType());
+                //particle.transform.position = transform.position;
+                //particle.Play();
             }
-        }       
+        }
+
+        public Transform targetUI;
+        public GameObject animatedCoinPrefab;
+        public float animationDuration = 5f;
+        public Animator coinColletingAnim;
+        private IEnumerator MoveCoinToTarget()
+        {
+
+            GameObject animatedCoin = Instantiate(animatedCoinPrefab, transform.position, Quaternion.identity);
+
+            Vector3 startPosition = animatedCoin.transform.position;
+            float elapsedTime = 0f;
+
+            while (elapsedTime < animationDuration)
+            {
+                animatedCoin.transform.position = Vector3.Lerp(startPosition, targetUI.position, elapsedTime / animationDuration);
+                elapsedTime += Time.deltaTime;
+                yield return null; 
+            }
+
+
+            animatedCoin.transform.position = targetUI.position;
+            
+            //Dodaj
+            //coinColletingAnim.Play("");
+            Destroy(animatedCoin); 
+        }
         private void OnDrawGizmos()
         {
             if (detectionPoint == null)
