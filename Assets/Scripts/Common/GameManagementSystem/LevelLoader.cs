@@ -25,24 +25,26 @@ namespace SpaceDrifter2D
 
         [SerializeField] private GameObject gamePlayCamera;
         public static void LoadLevel(LevelData level)
-        {           
+        {
+            
             SceneLoadingInitiated?.Invoke( Instance.targetLevel );
 
             Instance.targetLevel = level;
-            //Cyprian Add this
-            //if(Instance.gamePlayCamera != null)
-            //{
-            //    Instance.gamePlayCamera.SetActive(true);
-            //}
-            //END
-            if (Instance.currentLevel != null && Instance.currentLevel.Fade ) // no currentLevel means we just started the Game
+            if (Instance.currentLevel != null && Instance.currentLevel.Fade) //&& level.Type != LevelType.MainMenu) // no currentLevel means we just started the Game
             {
                 //Begin fading and wait for it. Begin actual loading when faded
 
                 //SOMETHING NEEDS TO CHANGE TO WORK THE SAME AS SEBASTIAN'S
                 Instance.screenFader.gameObject.SetActive(true);
                 Instance.screenFader.Fade( Instance.BeginLoading );
+                Debug.Log("LoadLevel");
             }
+            //else if (level.Type == LevelType.MainMenu)
+            //{
+            //    Instance.screenFader.gameObject.SetActive(true);
+            //    Instance.screenFader.Fade(Instance.BeginLoading);
+            //    //ADD ANOTHER SOLUTION HERE
+            //}
             else
             {
                 Instance.BeginLoading();
@@ -53,6 +55,7 @@ namespace SpaceDrifter2D
 
         private void BeginLoading()
         {
+            Debug.Log("BeginLoading");
             SceneFaded?.Invoke(targetLevel);
             
             //Unload previous level

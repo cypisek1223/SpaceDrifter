@@ -316,6 +316,8 @@ namespace SpaceDrifter2D
     {
         public int levelId;
         public bool blocked;
+        public bool finished;
+        public bool recommended;
         public int starts;
         
         public float bestTime;

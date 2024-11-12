@@ -13,7 +13,6 @@ namespace SpaceDrifter2D
         private Coroutine speedDecayCoroutine;
 
         [SerializeField] Rigidbody2D playerRb;
-        [SerializeField] PlayerController playerController;
 
         [SerializeField] float speedMultiplier = 1.2f;
         [SerializeField] float boostDuration = 2f;
@@ -58,15 +57,13 @@ namespace SpaceDrifter2D
                         speedDecayCoroutine = null;
                     }
 
-                    //playerController.smokeParticles.SetActive(false);
-                    //playerController.fireParticles.SetActive(false);
-                    //playerController.speedingParticles.SetActive(true);
 
                     partilesController.Play("SpeedParticlesOn");
 
                     originalVelocity = playerRb.velocity;
 
                     Vector2 direction = playerRb.transform.up;
+
                     targetVelocity = direction * (originalVelocity.magnitude * speedMultiplier);  
                 }
 

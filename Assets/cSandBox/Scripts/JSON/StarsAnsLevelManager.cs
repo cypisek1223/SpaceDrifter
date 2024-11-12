@@ -52,10 +52,6 @@ namespace SpaceDrifter2D
             {
                 int levelIndex = i;
 
-                UpdateStarDisplay(levelIndex);
-
-                levelButtons[levelIndex].button.onClick.AddListener(() => OnLevelSelected(gameDate.levels[levelIndex].level, planets));
-
                 if (gameDate.levels[i] == null)
                 {
                     Debug.Log($"Element gameDate.levels[{i}] jest null. SprawdŸ, czy wszystkie poziomy s¹ zainicjalizowane.");
@@ -66,14 +62,21 @@ namespace SpaceDrifter2D
                     Debug.Log("gameDate lub gameDate.levels jest null. Upewnij siê, ¿e zosta³y prawid³owo przypisane w Inspectorze.");
                     return;
                 }
-                if (gameDate.levels[i].blocked)
-                {
-                    UpdateLockLevel(i,false);
-                }
-                else
-                {
-                    UpdateLockLevel(i, true);
-                }
+
+
+                levelButtons[levelIndex].button.onClick.AddListener(() => OnLevelSelected(gameDate.levels[levelIndex].level, planets));
+
+                //if (gameDate.levels[levelIndex].finished)
+                //{
+                    UpdateStarDisplay(levelIndex);
+                //}
+                //else
+                //{
+                    LevelLockingSystem(levelIndex);
+                    RecommendLevel(levelIndex);
+                //}
+               
+                    
             }
 
             string sceneKey = $"{SceneManager.GetActiveScene().name}_FirstTime";
@@ -83,34 +86,56 @@ namespace SpaceDrifter2D
 
             }
         }
+        private void FinishedLevel(int _i)
+        {
 
+        }
         private void UpdateLockLevel(int _i,bool _active)
         {
             levelButtons[_i].button.interactable = _active;
             levelButtons[_i].stars.SetActive(_active);
             levelButtons[_i].padlock.SetActive(!_active);
         }
-        private void UpdateStarDisplay(int levelIndex)
+        private void UpdateStarDisplay(int _i)
         {
-            if (levelStars[levelIndex] == null)
+            if (levelStars[_i] == null)
             {
-                Debug.Log($"levelStars[{levelIndex}] jest null.");
+                Debug.Log($"levelStars[{_i}] jest null.");
                 return;
             }
 
-            if (gameDate.levels[levelIndex] == null)
+            if (gameDate.levels[_i] == null)
             {
-                Debug.Log($"gameDate.levels[{levelIndex}] jest null.");
+                Debug.Log($"gameDate.levels[{_i}] jest null.");
                 return;
             }
 
-            int stars = gameDate.levels[levelIndex].starts;
-            levelStars[levelIndex].DowlandStarts(levelIndex, stars);
+            int stars = gameDate.levels[_i].starts;
+            levelStars[_i].DowlandStarts(_i, stars);
+        }
+        private void LevelLockingSystem(int _i)
+        {
+            if (gameDate.levels[_i].blocked)
+            {
+                UpdateLockLevel(_i, false);
+            }
+            else
+            {
+                UpdateLockLevel(_i, true);
+            }
+        }
+
+        private void RecommendLevel(int _i)
+        {
+            if (gameDate.levels[_i].recommended)
+            {
+
+            }                
         }
         #endregion
 
         #region LevelManager
-        
+
 
         public void OnLevelSelected(LevelData level, PlanetData planetData)
         {

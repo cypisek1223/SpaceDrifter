@@ -15,7 +15,7 @@ namespace SpaceDrifter2D
         [SerializeField] private Rigidbody2D rb;
         [SerializeField] private SpriteRenderer ship;
         [SerializeField] private SpriteRenderer shipInnerGlow;
-        [SerializeField] private EnginesParticleController engineParticles;
+        //[SerializeField] private EnginesParticleController engineParticles;
 
 
         [SerializeField] public Animator partilesController;
@@ -27,7 +27,6 @@ namespace SpaceDrifter2D
 
         //Cyprian Added this 
         public bool renewParticles = false;
-
 
         [SerializeField] DamageSystem damageSys;
 
@@ -97,10 +96,11 @@ namespace SpaceDrifter2D
         }
         public void TurnEnginesOff()
         {
-            engineParticles.gameObject.SetActive(false);
+            //engineParticles.gameObject.SetActive(false);
 
 
             Debug.Log("Zatrzymanie dzialania Animacji");
+
             partilesController.enabled = false;
             smokeParticles.SetActive(false);
             fireParticles.SetActive(false);
@@ -111,7 +111,7 @@ namespace SpaceDrifter2D
         {
             ship.enabled = false;
             shipInnerGlow.enabled = false;
-            engineParticles.gameObject.SetActive(false);
+            //engineParticles.gameObject.SetActive(false);
 
 
             
@@ -123,7 +123,7 @@ namespace SpaceDrifter2D
         {
             ship.enabled = true;
             shipInnerGlow.enabled = true;
-            engineParticles.gameObject.SetActive(true);
+            //engineParticles.gameObject.SetActive(true);
 
 
             

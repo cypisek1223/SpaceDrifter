@@ -24,6 +24,7 @@ namespace SpaceDrifter2D
             }
             if (Input.GetKeyDown(KeyCode.X))
             {
+                Debug.Log("SLOW DOWWN");
                 isSlowingDown = true;
             }
             if (Input.GetKeyUp(KeyCode.X))

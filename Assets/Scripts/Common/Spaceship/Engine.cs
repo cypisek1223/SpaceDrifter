@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace SpaceDrifter2D
 {
@@ -24,11 +25,17 @@ namespace SpaceDrifter2D
         [SerializeField] FuelTank tank;
         Rigidbody2D rb;
 
+        //CYPRIAN ADDED THIS 
+        [SerializeField] float fuelDecreaseInterval;
+
+        [SerializeField] FuelBehaviour fuelBehaviour;
+
         #region Unity Callbacks
         protected virtual void Start()
         {
             rb = GetComponentInParent<Rigidbody2D>();
-           // particleController = GetComponentInChildren<EngineParticleController>();
+
+            // particleController = GetComponentInChildren<EngineParticleController>();
         }
 
         protected virtual void Update()
@@ -77,8 +84,13 @@ namespace SpaceDrifter2D
         {
              availableFuel = tank ? tank.UseFuel(fuelUsagePerSecond * Time.deltaTime * power / MaxPower) : fuelUsagePerSecond * Time.deltaTime * power / MaxPower;
 
-            if (availableFuel > 0)
+            fuelBehaviour.StopTanking();
+
+            if (availableFuel > 0 && fuelBehaviour.Fuel > 0)
             {
+                //CYPRIAN ADDED THIS
+
+                fuelBehaviour.TakingFuel();
                 // Available Fuel will always be less or equal to FuelUsage over time, which means that actualPower is in (0-1) range
                 float actualPower = availableFuel / (fuelUsagePerSecond * Time.deltaTime);
                 Vector3 force = transform.up * power * rb.mass * actualPower;
@@ -87,5 +99,8 @@ namespace SpaceDrifter2D
             }
         }
         #endregion
+
+        //CYPRIAN ADDED THIS
+       
     }
 }

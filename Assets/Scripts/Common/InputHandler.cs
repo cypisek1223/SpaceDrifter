@@ -44,20 +44,9 @@ namespace SpaceDrifter2D
         }
 
         private void TurboOn()
-        {
+        {           
             if (cooldown) return;
-
-            if (fisrtTime || playerController.renewParticles)
-            {
-                Debug.Log("SMOKE ON");
-                playerController.partilesController.enabled = true;
-                playerController.smokeParticles.SetActive(true);
-                playerController.fireParticles.SetActive(true);
-
-                playerController.renewParticles = false;
-                fisrtTime = false;
-            }
-
+          
             turbo = true;
             TurboThrustActivated?.Invoke();
             StartCoroutine(TurboTimer());
@@ -148,6 +137,16 @@ namespace SpaceDrifter2D
 #else
             if(thrustButton.IsHeld)
             {
+               if (fisrtTime || playerController.renewParticles)
+               {
+                   Debug.Log("SMOKE ON");
+                   playerController.partilesController.enabled = true;
+                   playerController.smokeParticles.SetActive(true);
+                   playerController.fireParticles.SetActive(true);
+
+                   playerController.renewParticles = false;
+                   fisrtTime = false;
+               }
             thrust = 1;
             }
             else

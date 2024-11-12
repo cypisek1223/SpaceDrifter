@@ -7,7 +7,8 @@ namespace SpaceDrifter2D
 {
     public class LoadingScreen : MonoBehaviour
     {
-        float progress;
+        [SerializeField] float progress;
+        [SerializeField] float addedTime;
 
         public void Process( AsyncOperation[] aops, Action callback )
         {
@@ -27,6 +28,7 @@ namespace SpaceDrifter2D
                 progress = aops.Sum(ao => ao.progress) / aops.Length;
                 yield return null;
             }
+            yield return new WaitForSeconds(addedTime);
 
             HideLoadingScreen();
             callback?.Invoke();
