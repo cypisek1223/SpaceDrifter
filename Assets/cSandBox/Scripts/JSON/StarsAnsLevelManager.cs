@@ -40,6 +40,9 @@ namespace SpaceDrifter2D
             public Button button;
             public GameObject stars;
             public GameObject padlock;
+            public Image Element1;
+            public Image Element2;
+            public Animator anim;
         }
 
 
@@ -66,15 +69,27 @@ namespace SpaceDrifter2D
 
                 levelButtons[levelIndex].button.onClick.AddListener(() => OnLevelSelected(gameDate.levels[levelIndex].level, planets));
 
-                //if (gameDate.levels[levelIndex].finished)
-                //{
-                    UpdateStarDisplay(levelIndex);
-                //}
-                //else
-                //{
-                    LevelLockingSystem(levelIndex);
+                UpdateStarDisplay(levelIndex);
+                LevelLockingSystem(levelIndex);
+
+                levelButtons[i].anim.SetBool("Recomended", false);
+
+                if (gameDate.levels[levelIndex].finished)
+                {
+                    Finished(i);
+                }
+                else if (gameDate.levels[levelIndex].recommended)
+                {
+
                     RecommendLevel(levelIndex);
-                //}
+                }
+                else
+                {
+                    continue;
+                }
+
+                    
+
                
                     
             }
@@ -127,10 +142,17 @@ namespace SpaceDrifter2D
 
         private void RecommendLevel(int _i)
         {
-            if (gameDate.levels[_i].recommended)
-            {
+            levelButtons[_i].Element1.color = Color.blue;
+            levelButtons[_i].Element2.color = Color.blue;
 
-            }                
+            //levelButtons[_i].anim.Play("Recomended");
+            levelButtons[_i].anim.SetBool("Recomended", true);
+        }
+
+        private void Finished(int _i)
+        {
+            levelButtons[_i].Element1.color = Color.green;
+            levelButtons[_i].Element2.color = Color.green;
         }
         #endregion
 

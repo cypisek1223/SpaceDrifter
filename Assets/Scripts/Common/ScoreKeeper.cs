@@ -143,8 +143,17 @@ namespace SpaceDrifter2D
             levelStats.gameObject.SetActive(true);
             levelStats.Display((int)time.TotalSeconds, coins);
 
+            ///ZAPISZ TO W FUNKCJI
+            if (dataLevel.levels[id].recommended)
+                dataLevel.levels[id].recommended = false;
 
-
+          
+            if (dataLevel.levels[id].nextLevelToRecomened != 0)
+            {
+                dataLevel.levels[dataLevel.levels[id].nextLevelToRecomened].recommended = true;
+            }
+            dataLevel.levels[id].finished = true;
+            ///ZAPISZ TO W FUNKCJI
         }
 
         private IEnumerator CountTime()
@@ -315,11 +324,13 @@ namespace SpaceDrifter2D
     public class LevelDate2
     {
         public int levelId;
+
         public bool blocked;
         public bool finished;
         public bool recommended;
+        public int nextLevelToRecomened;
+
         public int starts;
-        
         public float bestTime;
         public float theBestTimeForStars;
         public float mediumTimeForStars;

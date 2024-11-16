@@ -36,7 +36,9 @@ namespace SpaceDrifter2D
                 Debug.Log("Player IN Portal");
                 PlayerController pcont = collision.gameObject.GetComponentInParent<PlayerController>();
                 pcont.TurnEnginesOff();
-
+                //CYPRIAN ADDED THIS
+                pcont.Rb.velocity = Vector2.zero;
+                
                 ScoreKeeper.Instance.PauseTime();
                 
                 LeanTween.move(collision.gameObject, targetPosition.position, 3f).setEase(LeanTweenType.easeOutQuint);

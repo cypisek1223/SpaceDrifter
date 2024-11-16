@@ -61,7 +61,7 @@ namespace SpaceDrifter2D
                 }
                 else
                 {
-                    ScoreKeeper.Instance.CoinCollect();
+                    
                     StartCoroutine(MoveCoinToTarget());
 
                 }
@@ -99,9 +99,10 @@ namespace SpaceDrifter2D
 
 
             animatedCoin.transform.position = targetUI.position;
-            
+
             //Dodaj
-            //coinColletingAnim.Play("");
+            coinColletingAnim.Play("CoinAnimation");
+            ScoreKeeper.Instance.CoinCollect();
             Destroy(animatedCoin); 
         }
         private void OnDrawGizmos()

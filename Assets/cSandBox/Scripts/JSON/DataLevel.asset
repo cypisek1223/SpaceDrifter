@@ -15,6 +15,9 @@ MonoBehaviour:
   levels:
   - levelId: 0
     blocked: 1
+    finished: 0
+    recommended: 0
+    nextLevelToRecomened: 0
     starts: 0
     bestTime: 0
     theBestTimeForStars: 0
@@ -31,8 +34,11 @@ MonoBehaviour:
       length: 10
   - levelId: 1
     blocked: 0
+    finished: 0
+    recommended: 0
+    nextLevelToRecomened: 2
     starts: 2
-    bestTime: 19
+    bestTime: 22
     theBestTimeForStars: 30
     mediumTimeForStars: 40
     lowTimeForStars: 60
@@ -47,8 +53,11 @@ MonoBehaviour:
       length: 10
   - levelId: 2
     blocked: 0
-    starts: 0
-    bestTime: 0
+    finished: 0
+    recommended: 1
+    nextLevelToRecomened: 3
+    starts: 2
+    bestTime: 18
     theBestTimeForStars: 30
     mediumTimeForStars: 40
     lowTimeForStars: 60
@@ -63,6 +72,9 @@ MonoBehaviour:
       length: 10
   - levelId: 3
     blocked: 0
+    finished: 0
+    recommended: 0
+    nextLevelToRecomened: 4
     starts: 0
     bestTime: 0
     theBestTimeForStars: 30
@@ -79,6 +91,9 @@ MonoBehaviour:
       length: 10
   - levelId: 4
     blocked: 0
+    finished: 0
+    recommended: 0
+    nextLevelToRecomened: 5
     starts: 0
     bestTime: 0
     theBestTimeForStars: 30
@@ -95,6 +110,9 @@ MonoBehaviour:
       length: 10
   - levelId: 5
     blocked: 0
+    finished: 0
+    recommended: 0
+    nextLevelToRecomened: 6
     starts: 0
     bestTime: 0
     theBestTimeForStars: 30
@@ -111,6 +129,9 @@ MonoBehaviour:
       length: 10
   - levelId: 6
     blocked: 0
+    finished: 0
+    recommended: 0
+    nextLevelToRecomened: 7
     starts: 0
     bestTime: 0
     theBestTimeForStars: 30
@@ -127,6 +148,9 @@ MonoBehaviour:
       length: 10
   - levelId: 7
     blocked: 1
+    finished: 0
+    recommended: 0
+    nextLevelToRecomened: 8
     starts: 0
     bestTime: 0
     theBestTimeForStars: 30
@@ -143,6 +167,9 @@ MonoBehaviour:
       length: 10
   - levelId: 8
     blocked: 1
+    finished: 0
+    recommended: 0
+    nextLevelToRecomened: 9
     starts: 0
     bestTime: 0
     theBestTimeForStars: 30
@@ -159,6 +186,9 @@ MonoBehaviour:
       length: 10
   - levelId: 9
     blocked: 1
+    finished: 0
+    recommended: 0
+    nextLevelToRecomened: 10
     starts: 0
     bestTime: 0
     theBestTimeForStars: 30
@@ -175,6 +205,9 @@ MonoBehaviour:
       length: 10
   - levelId: 10
     blocked: 1
+    finished: 0
+    recommended: 0
+    nextLevelToRecomened: 0
     starts: 0
     bestTime: 0
     theBestTimeForStars: 30
@@ -189,4 +222,3 @@ MonoBehaviour:
       locked: 1
       seed: 1
       length: 10
-  predictetLevel: 1
