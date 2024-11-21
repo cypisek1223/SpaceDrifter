@@ -17,6 +17,7 @@ TagManager:
   - ScoreKeeper
   - FinishLevelPanel
   - BonusCoin
+  - FuelCoin
   layers:
   - Default
   - TransparentFX

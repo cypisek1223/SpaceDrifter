@@ -28,10 +28,11 @@ namespace SpaceDrifter2D
         {
             taking = false;
         }
-        public void AddedFuel(float power, float time)
+        public void AddedFuel()//float power, float time)
         {
-            fuel += power;
-            fuel = Mathf.Clamp(fuel, 0, 1);
+            //fuel += power;
+            //fuel = Mathf.Clamp(fuel, 0, 1);
+            fuel = 1;
         }
         public void WaistingFuel(float amountFuel, float _fuelDecreaseInterval)
         {

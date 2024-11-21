@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.Events;
+
 namespace SpaceDrifter2D
 {
     public class CoinCollision : PoolEmitter
     {
         [SerializeField] LayerMask coinLayer;
         [SerializeField] LayerMask bonuscCoinLayer;
+
+        
 
         [Header("Coin Collecting")]
         private Type t = typeof(TextMesh);
@@ -23,6 +27,9 @@ namespace SpaceDrifter2D
 
         [Header("Optional")]
         [SerializeField] Transform detectionPoint;
+
+        [Header("Fuel Coin")]
+        public UnityEvent fuelEvent;
 
         private void Update()
         {
@@ -50,23 +57,19 @@ namespace SpaceDrifter2D
 
             foreach (var hitCollider in hitColliders)
             {
-                //Destroy(hitCollider.gameObject);
-                //hitCollider.gameObject.active = false;
-
-               
-
                 if(hitCollider.tag == "BonusCoin")
                 {
                     ScoreKeeper.Instance.BonusCoinCollect();
                 }
-                else
+                else if (hitCollider.tag == "FuelCoin")
                 {
-                    
-                    StartCoroutine(MoveCoinToTarget());
-
+                    fuelEvent.Invoke();
                 }
-                
-               
+                else
+                {  
+                    StartCoroutine(MoveCoinToTarget());
+                }
+                             
                 if(coinCollectedAnim != null)
                 coinCollectedAnim.Play("coinCollected");
                 

@@ -121,10 +121,13 @@ namespace SpaceDrifter2D
                 thrust = 1;
                if (fisrtTime||playerController.renewParticles)
                {
-                    Debug.Log("SMOKE ON");
                     playerController.partilesController.enabled = true;
+
                     playerController.smokeParticles.SetActive(true);
                     playerController.fireParticles.SetActive(true);
+
+                    playerController.speedingParticles.SetActive(true);
+                    playerController.speedEffect.SetActive(true);
 
                     playerController.renewParticles = false;
                     fisrtTime = false;

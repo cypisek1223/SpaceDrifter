@@ -46,6 +46,8 @@ namespace SpaceDrifter2D
 
             smokeParticles.SetActive(false);
             fireParticles.SetActive(false);
+            speedingParticles.SetActive(false);
+            speedEffect.SetActive(false);
         }
 
         private void OnDestroy()
@@ -86,7 +88,9 @@ namespace SpaceDrifter2D
             smokeParticles.SetActive(false);
             fireParticles.SetActive(false);
             speedEffect.SetActive(true);
-            //speedingParticles.SetActive(false);
+
+            //ZMIENIONE
+            speedingParticles.SetActive(true);
             renewParticles = true;
         }
         public void TurnEnginesOff()

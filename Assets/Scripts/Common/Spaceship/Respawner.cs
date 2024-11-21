@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace SpaceDrifter2D
@@ -30,6 +31,7 @@ namespace SpaceDrifter2D
         [SerializeField] GameObject startPortal;
         [SerializeField] Animator portalAnimation;
 
+        [SerializeField] UnityEvent Fuel;
         private EntrancePicker respawnPicker;
 
         //LeanTween controls
@@ -72,6 +74,7 @@ namespace SpaceDrifter2D
             playerController.Rb.transform.localScale = Vector3.zero;
 
             Portal();
+            Fuel.Invoke();
             Invoke(nameof(PlayerRb), 1.15f);
 
             LeanTween.scale(playerController.Rb.gameObject, Vector3.one, 0.5f).setEase( LeanTweenType.easeOutQuint );

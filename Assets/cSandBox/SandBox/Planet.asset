@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd6d60f20cb7a14da7511941fbb0934, type: 3}
+  m_Name: Planet
+  m_EditorClassIdentifier: 
+  name: 
+  description: 
+  backgroundMat: {fileID: 0}
+  splashMat: {fileID: 0}
+  themePrimaryColor: {r: 0, g: 0, b: 0, a: 0}
+  themeLightColor: {r: 0, g: 0, b: 0, a: 0}
+  themeDarkColor: {r: 0, g: 0, b: 0, a: 0}
+  levelList:
+  - levelID: 0
+    name: 
+    scene: LogoScen
+    levelType: 0
+    fade: 0
+    locked: 0
+    seed: 0
+    length: 0
+  - levelID: 1
+    name: 
+    scene: Color3Generation
+    levelType: 0
+    fade: 0
+    locked: 0
+    seed: 0
+    length: 0
+  - levelID: 2
+    name: 
+    scene: Color1Generation
+    levelType: 0
+    fade: 0
+    locked: 0
+    seed: 0
+    length: 0
+  - levelID: 3
+    name: 
+    scene: Color2Generation
+    levelType: 0
+    fade: 0
+    locked: 0
+    seed: 0
+    length: 0
+  - levelID: 4
+    name: 
+    scene: Color3Generation
+    levelType: 0
+    fade: 0
+    locked: 0
+    seed: 0
+    length: 0
+  - levelID: 5
+    name: 
+    scene: Color4Generation
+    levelType: 0
+    fade: 0
+    locked: 0
+    seed: 0
+    length: 0
+  - levelID: 6
+    name: 
+    scene: Color5Generation
+    levelType: 0
+    fade: 0
+    locked: 0
+    seed: 0
+    length: 0
+  - levelID: 7
+    name: 
+    scene: LevelMenu
+    levelType: 0
+    fade: 0
+    locked: 0
+    seed: 0
+    length: 0
+  - levelID: 8
+    name: 
+    scene: LevelMenu
+    levelType: 0
+    fade: 0
+    locked: 0
+    seed: 0
+    length: 0
+  - levelID: 9
+    name: 
+    scene: LevelMenu
+    levelType: 0
+    fade: 0
+    locked: 0
+    seed: 0
+    length: 0
+  - levelID: 10
+    name: 
+    scene: LevelMenu
+    levelType: 0
+    fade: 0
+    locked: 0
+    seed: 0
+    length: 0
+  locked: 1

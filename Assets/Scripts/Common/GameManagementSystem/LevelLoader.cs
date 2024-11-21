@@ -63,10 +63,10 @@ namespace SpaceDrifter2D
             {
                 asyncUnloading = SceneManager.UnloadSceneAsync(currentLevel.Scene); // Consider using different mode
             }
-
+            
             //Load next level
             asyncLoading = SceneManager.LoadSceneAsync(targetLevel.Scene, LoadSceneMode.Additive);
-
+            
             loadingScreen.Process( new AsyncOperation[]{ asyncUnloading, asyncLoading }, OnLevelLoaded );
             
             screenFader.gameObject.SetActive(false);
