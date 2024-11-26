@@ -55,7 +55,6 @@ namespace SpaceDrifter2D
 
         private void BeginLoading()
         {
-            Debug.Log("BeginLoading");
             SceneFaded?.Invoke(targetLevel);
             
             //Unload previous level

@@ -22,19 +22,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2977567580125862473, guid: 9f1843259823f54418bfa0220c24ac2a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2977567580125862473, guid: 9f1843259823f54418bfa0220c24ac2a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2977567580125862473, guid: 9f1843259823f54418bfa0220c24ac2a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2977567580125862473, guid: 9f1843259823f54418bfa0220c24ac2a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2977567580125862473, guid: 9f1843259823f54418bfa0220c24ac2a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -48,9 +48,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7040253562477709390, guid: 9f1843259823f54418bfa0220c24ac2a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7665885655123020766, guid: 9f1843259823f54418bfa0220c24ac2a, type: 3}
       propertyPath: m_Name
-      value: kulki_2 (13) Variant
+      value: 'kulki_2 '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

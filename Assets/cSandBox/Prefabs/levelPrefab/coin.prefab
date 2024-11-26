@@ -8,13 +8,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7561504669873810689, guid: 10d1c258917221a4b8215ab3fc3b60b7, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
+    - target: {fileID: 2098681809595976292, guid: 10d1c258917221a4b8215ab3fc3b60b7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7561504669873810689, guid: 10d1c258917221a4b8215ab3fc3b60b7, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
+    - target: {fileID: 6222182695095009372, guid: 10d1c258917221a4b8215ab3fc3b60b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7561504669873810689, guid: 10d1c258917221a4b8215ab3fc3b60b7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8568097973089266226, guid: 10d1c258917221a4b8215ab3fc3b60b7, type: 3}
       propertyPath: m_Name
-      value: kulki_1 (12) Variant
+      value: coin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
