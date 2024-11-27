@@ -20,7 +20,7 @@ MonoBehaviour:
     scene: LevelMenu
     levelType: 0
     fade: 1
-    locked: 1
+    locked: 0
     seed: 1
     length: 10
   inMenu: 1

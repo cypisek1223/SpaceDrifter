@@ -88,8 +88,6 @@ namespace SpaceDrifter2D
             smokeParticles.SetActive(false);
             fireParticles.SetActive(false);
             speedEffect.SetActive(true);
-
-            //ZMIENIONE
             speedingParticles.SetActive(true);
             renewParticles = true;
         }

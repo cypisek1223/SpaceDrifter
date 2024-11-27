@@ -200,7 +200,7 @@ namespace SpaceDrifter2D
         #region Slow Down
         public Rigidbody2D rb;           
         public float slowdownForce = 5f; 
-        public float slowdownFactor = 0.5f;
+        public float slowdownFactor = 2f;
         public bool isSlowingDown = false;
 
         //IT WILL BE CHANGING

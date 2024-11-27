@@ -31,81 +31,81 @@ MonoBehaviour:
   - levelID: 1
     name: 
     scene: Color3Generation
-    levelType: 0
-    fade: 0
+    levelType: 2
+    fade: 1
     locked: 0
-    seed: 0
-    length: 0
+    seed: 10
+    length: 10
   - levelID: 2
     name: 
     scene: Color1Generation
-    levelType: 0
-    fade: 0
+    levelType: 2
+    fade: 1
     locked: 0
-    seed: 0
-    length: 0
+    seed: 10
+    length: 10
   - levelID: 3
     name: 
     scene: Color2Generation
-    levelType: 0
-    fade: 0
+    levelType: 2
+    fade: 1
     locked: 0
-    seed: 0
-    length: 0
+    seed: 10
+    length: 10
   - levelID: 4
     name: 
     scene: Color3Generation
-    levelType: 0
-    fade: 0
+    levelType: 2
+    fade: 1
     locked: 0
-    seed: 0
-    length: 0
+    seed: 10
+    length: 10
   - levelID: 5
     name: 
     scene: Color4Generation
-    levelType: 0
-    fade: 0
+    levelType: 2
+    fade: 1
     locked: 0
-    seed: 0
-    length: 0
+    seed: 10
+    length: 10
   - levelID: 6
     name: 
     scene: Color5Generation
-    levelType: 0
-    fade: 0
+    levelType: 2
+    fade: 1
     locked: 0
-    seed: 0
-    length: 0
+    seed: 10
+    length: 10
   - levelID: 7
     name: 
     scene: LevelMenu
-    levelType: 0
-    fade: 0
+    levelType: 2
+    fade: 1
     locked: 0
-    seed: 0
-    length: 0
+    seed: 10
+    length: 10
   - levelID: 8
     name: 
     scene: LevelMenu
-    levelType: 0
-    fade: 0
-    locked: 0
-    seed: 0
-    length: 0
+    levelType: 2
+    fade: 1
+    locked: 1
+    seed: 10
+    length: 10
   - levelID: 9
     name: 
     scene: LevelMenu
-    levelType: 0
-    fade: 0
-    locked: 0
+    levelType: 2
+    fade: 1
+    locked: 1
     seed: 0
     length: 0
   - levelID: 10
     name: 
     scene: LevelMenu
-    levelType: 0
-    fade: 0
-    locked: 0
+    levelType: 2
+    fade: 1
+    locked: 1
     seed: 0
     length: 0
   locked: 1

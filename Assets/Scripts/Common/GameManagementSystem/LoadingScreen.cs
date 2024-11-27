@@ -12,6 +12,7 @@ namespace SpaceDrifter2D
 
         [Header("Spaceship Animation Settings")]
         [SerializeField] private GameObject spaceship; // Obiekt statku
+        [SerializeField] private ParticleSystem smokeParticles;
         [SerializeField] private Transform startPosition; // Punkt pocz¹tkowy animacji
         [SerializeField] private Transform endPosition;   // Punkt koñcowy animacji
         [SerializeField] private float animationDuration = 3f; // Czas trwania animacji statku (w sekundach)
@@ -33,6 +34,7 @@ namespace SpaceDrifter2D
             // Ustaw stateczek w pozycji pocz¹tkowej
             if (spaceship != null && startPosition != null)
             {
+                smokeParticles.Play();
                 spaceship.transform.position = startPosition.position;
             }
 
@@ -80,6 +82,7 @@ namespace SpaceDrifter2D
             // Ukryj ekran ³adowania i wywo³aj callback
             HideLoadingScreen();
             callback?.Invoke();
+            smokeParticles.Stop();
         }
 
         /// <summary>

@@ -17,6 +17,10 @@ namespace SpaceDrifter2D
         [SerializeField] private ScoreKeeper scoreKeeper;
         public DataLevel gameDate;
 
+
+        [SerializeField] Color colorFinished;
+        [SerializeField] Color colorRecomended;
+
         #region StarsManager
         [System.Serializable]
         public class LevelStars
@@ -142,8 +146,8 @@ namespace SpaceDrifter2D
 
         private void RecommendLevel(int _i)
         {
-            levelButtons[_i].Element1.color = Color.blue;
-            levelButtons[_i].Element2.color = Color.blue;
+            //levelButtons[_i].Element1.color = colorRecomended;
+            //levelButtons[_i].Element2.color = colorRecomended;
 
             //levelButtons[_i].anim.Play("Recomended");
             levelButtons[_i].anim.SetBool("Recomended", true);
@@ -151,8 +155,8 @@ namespace SpaceDrifter2D
 
         private void Finished(int _i)
         {
-            levelButtons[_i].Element1.color = Color.green;
-            levelButtons[_i].Element2.color = Color.green;
+            levelButtons[_i].Element1.color = colorFinished;
+            levelButtons[_i].Element2.color = colorFinished;
         }
         #endregion
 
